@@ -44,7 +44,8 @@
     niri
   ];
   programs.niri.enable = true;
-  hardware.opengl.enable = true; # vm issues?
+  hardware.graphics.enable = true; # vm issues?
+  hardware.graphics.enable32bit = true; # vm issues?
   # Set the default editor to vim
   environment.variables.EDITOR = "helix";
 
