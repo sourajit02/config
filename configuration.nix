@@ -9,7 +9,8 @@
   ];
 
   system.stateVersion = "25.11"; # never change this
-  users.users.root.initialHashedPassword = "";
+  users.users.root.initialPassword = "password";
+  security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "hbox";
@@ -52,9 +53,12 @@
   users.users.s = {
     home = "/users/s";
     isNormalUser = true;
+    initialPassword = "password";
     extraGroups = [
       "wheel"
       "networkmanager"
+      "audio"
+      "video"
     ];
     createHome = false;
   };
