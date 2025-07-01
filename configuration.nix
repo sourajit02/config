@@ -39,7 +39,7 @@
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
     git
-    nvim
+    neovim
     helix
     wget
   ];
