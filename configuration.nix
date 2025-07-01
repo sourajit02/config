@@ -56,20 +56,22 @@
       "wheel"
       "networkmanager"
     ];
-    createHome = true;
+    createHome = false;
   };
 
+  boot.kernelParams = [ "consoleblank=0" ]; # prevent tty2 from redirecting to tty1 after inactivity
+
   # Use systemd.tmpfiles to create the home directory in the user's profile
-  systemd.tmpfiles.settings = {
-    "10-create-home" = {
-      "/users/s/home" = {
-        d = {
-          group = "root";
-          mode = "0700";
-          user = "s";
-        };
-      };
-    };
-  };
+  # systemd.tmpfiles.settings = {
+  #   "10-create-home" = {
+  #     "/users/s/home" = {
+  #       d = {
+  #         group = "root";
+  #         mode = "0700";
+  #         user = "s";
+  #       };
+  #     };
+  #   };
+  # };
 
 }
