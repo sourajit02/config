@@ -73,13 +73,13 @@
           # mode = "0700";
           user = "s";
         };
-        "/users/s/config" = {
-          # Z for recursive
-          z = {
-            group = "root";
-            # mode = "0700";
-            user = "s";
-          };
+      };
+      "/users/s/config" = {
+        # Z for recursive
+        z = {
+          group = "root";
+          # mode = "0700";
+          user = "s";
         };
       };
     };
