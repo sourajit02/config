@@ -63,17 +63,25 @@
     createHome = false;
   };
 
-  # Use systemd.tmpfiles to create the home directory in the user's profile
-  # systemd.tmpfiles.settings = {
-  #   "10-create-home" = {
-  #     "/users/s/home" = {
-  #       d = {
-  #         group = "root";
-  #         mode = "0700";
-  #         user = "s";
-  #       };
-  #     };
-  #   };
-  # };
-
+  # transfer ownership to s
+  systemd.tmpfiles.settings = {
+    "10-give-s-ownership" = {
+      "/users/s/home" = {
+        # Z for recursive
+        z = {
+          group = "root";
+          # mode = "0700";
+          user = "s";
+        };
+        "/users/s/config" = {
+          # Z for recursive
+          z = {
+            group = "root";
+            # mode = "0700";
+            user = "s";
+          };
+        };
+      };
+    };
+  };
 }
