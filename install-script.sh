@@ -16,7 +16,7 @@ if [ -d "nixcfg" ]; then
 fi
 git clone https://github.com/sourajit02/nixcfg
 cd nixcfg
-sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
+sudo nixos-generate-config --no-filesystems --force --show-hardware-config > hardware-configuration.nix
 sudo chown -R s:root .
 su - s
 # su - s -c "cd config && pwd"
