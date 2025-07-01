@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e # instead of chaining &&s
 # cd / # this is on iso so doesn't matter where it is, will get deleted anyway
 # sudo git clone https://github.com/sourajit02/nixcfg
