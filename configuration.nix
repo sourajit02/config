@@ -51,6 +51,11 @@
 
   users.users.s = {
     home = "/users/s";
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     createHome = true;
   };
 
