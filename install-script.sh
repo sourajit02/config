@@ -7,12 +7,11 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
 sudo nixos-generate-config --no-filesystems --root /mnt
 sudo cp /mnt/etc/nixos/hardware-configuration.nix .
 sudo nixos-install --root /mnt -I nixos-config=./configuration.nix --no-root-passwd
-# interactive
-sudo passwd root
-sudo passwd s
 su - s
 cd /mnt/users/s/config
 git clone https://github.com/sourajit02/nixcfg
 cd nixcfg
-sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
-  
+sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix  
+# interactive
+sudo passwd root
+sudo passwd s
