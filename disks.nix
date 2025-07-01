@@ -38,7 +38,7 @@
                     ];
                   };
                   "/nix" = {
-                    mountpoint = "/";
+                    mountpoint = "/nix";
                     mountOptions = [
                       "subvol=nix"
                       "compress=zstd"
