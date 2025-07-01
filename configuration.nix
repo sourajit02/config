@@ -22,6 +22,7 @@
   console.keyMap = "colemak";
   services.xserver = {
     enable = true;
+    # displayManager.gdm.enable = true;
     xkb = {
       layout = "us";
       variant = "colemak";
@@ -36,13 +37,15 @@
     "flakes"
   ];
   environment.systemPackages = with pkgs; [
-    # Flakes clones its dependencies through the git command,
-    # so git must be installed first
-    git
+    git # order matters, so git is first
+    wget
     neovim
     helix
-    wget
+    niri
   ];
+  programs.niri.enable = true;
+  programs.wayland.enable = true;
+  hardware.opengl.enable = true; # vm issues?
   # Set the default editor to vim
   environment.variables.EDITOR = "helix";
 
