@@ -4,11 +4,30 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./disks.nix
+    # ./disks.nix
   ];
 
-  # ......
-
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  networking.hostName = "hbox";
+  networking.networkmanager.enable = true;
+  services.printing.enable = true;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
+  time.timeZone = "Australia/Sydney";
+  console.keyMap = "colemak";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "colemak";
+    };
+  };
+  system.copySystemConfiguration = true;
+  services.openssh.enable = true;
+  programs.firefox.enable = true;
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [
     "nix-command"
@@ -25,5 +44,5 @@
   # Set the default editor to vim
   environment.variables.EDITOR = "helix";
 
-  # ......
+  system.stateVersion = "25.11"; # never change this
 }
