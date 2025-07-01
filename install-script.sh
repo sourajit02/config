@@ -11,6 +11,9 @@ sudo nixos-install --root /mnt -I nixos-config=./configuration.nix --no-root-pas
 sudo passwd root
 sudo passwd s
 cd /users/s/config
+if [ -d "nixcfg" ]; then
+    sudo rm -rf nixcfg
+fi
 git clone https://github.com/sourajit02/nixcfg
 cd nixcfg
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
