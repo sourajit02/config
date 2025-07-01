@@ -2,9 +2,15 @@
   description = "test config";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    disko.url = "github:nix-community/disko";
   };
   outputs =
-    { self, nixpkgs }:
+    {
+      self,
+      nixpkgs,
+      disko,
+      ...
+    }:
     {
 
       # Please replace my-nixos with your hostname
@@ -12,7 +18,8 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          ./hardware-configuration.nix
+          disko.nixosModules.disko
+          # ./hardware-configuration.nix
         ];
       };
     };
