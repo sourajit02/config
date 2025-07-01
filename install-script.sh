@@ -17,7 +17,7 @@ fi
 git clone https://github.com/sourajit02/nixcfg
 cd nixcfg
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
-chown -R s:root .
+sudo chown -R s:root .
 su - s
 # su - s -c "cd config && pwd"
 # su - s -c "git clone https://github.com/sourajit02/nixcfg"
