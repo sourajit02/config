@@ -10,7 +10,7 @@ sudo nixos-install --root /mnt -I nixos-config=./configuration.nix --no-root-pas
 # interactive
 sudo passwd root
 sudo passwd s
-su - s -c "cd config"
+su - s -c "cd config && pwd"
 # su - s -c "git clone https://github.com/sourajit02/nixcfg"
 # su - s -c "cd nixcfg"
 # su - s -c "sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix"
