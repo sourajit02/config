@@ -10,7 +10,10 @@
       # Please replace my-nixos with your hostname
       nixosConfigurations.hbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./configuration.nix ];
+        modules = [
+          ./configuration.nix
+          ./hardware-configuration.nix
+        ];
       };
     };
 }
