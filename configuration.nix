@@ -9,7 +9,7 @@
   ];
 
   system.stateVersion = "25.11"; # never change this
-  users.users.root.initialPassword = "password";
+  users.users.root.initialPassword = "password"; # install-script will prompt change for root and s
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
