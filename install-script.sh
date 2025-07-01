@@ -8,7 +8,7 @@ sudo nixos-generate-config --no-filesystems --root /mnt
 sudo cp /mnt/etc/nixos/hardware-configuration.nix .
 sudo nixos-install --root /mnt -I nixos-config=./configuration.nix --no-root-passwd
 su - s
-cd /mnt/users/s/config
+cd config
 git clone https://github.com/sourajit02/nixcfg
 cd nixcfg
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix  
