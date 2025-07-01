@@ -24,7 +24,7 @@
   console.keyMap = "colemak";
   services.xserver = {
     enable = true;
-    # displayManager.gdm.enable = true;
+    displayManager.startx.enable = true;
     xkb = {
       layout = "us";
       variant = "colemak";
