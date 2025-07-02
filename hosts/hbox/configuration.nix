@@ -3,8 +3,8 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    # ./disks.nix
+    # ./hardware-configuration.nix
+    ./disks.nix
   ];
 
   system.stateVersion = "25.11"; # never change this
@@ -39,6 +39,7 @@
   ];
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
+    curl
     wget
     neovim
     helix

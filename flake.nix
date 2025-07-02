@@ -1,28 +1,27 @@
 {
   description = "test config";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
+    inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    inputs.disko.url = "github:nix-community/disko";
+    inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
-      self,
       nixpkgs,
-      # home-manager,
-      # disko,
+      disko,
       ...
-    }@inputs:
+    }:
     {
+
+      # run this
+      # nixos-anywhere --flake .#generic --generate-hardware-config nixos-generate-config ./hosts/vbox/hardware-configuration.nix hbox
       nixosConfigurations.hbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          # disko.nixosModules.disko
-          ./configuration.nix
-          ./hardware-configuration.nix
-          ./disks.nix
+          disko.nixosModules.disko
+          ./hosts/vbox/configuration.nix
+          ./hosts/vbox/hardware-configuration.nix
         ];
       };
     };
