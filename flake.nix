@@ -11,16 +11,15 @@
     {
       self,
       nixpkgs,
-      disko,
+      # home-manager,
+      # disko,
       ...
-    }:
+    }@inputs:
     {
-
-      # Please replace my-nixos with your hostname
       nixosConfigurations.hbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          disko.nixosModules.disko
+          # disko.nixosModules.disko
           ./configuration.nix
           ./hardware-configuration.nix
           ./disks.nix
