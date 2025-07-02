@@ -23,4 +23,4 @@
 # # su - s -c "git clone https://github.com/sourajit02/nixcfg"
 # # su - s -c "cd nixcfg"
 # # su - s -c "sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix"
-sudo nix run github:nix-community/nixos-anywhere -- --flake .#hbox --generate-hardware-config nixos-generate-config ./hosts/hbox/hardware-configuration.nix --local
+sudo nix run github:nix-community/nixos-anywhere -- --flake .#hbox --generate-hardware-config nixos-generate-config ./hosts/hbox/hardware-configuration.nix /dev/sda
