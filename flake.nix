@@ -1,10 +1,9 @@
 {
   description = "test config";
   inputs = {
-
-    inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    inputs.disko.url = "github:nix-community/disko";
-    inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
