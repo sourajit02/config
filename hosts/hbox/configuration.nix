@@ -47,7 +47,6 @@
     niri
   ];
   programs.niri.enable = true;
-  programs.helix.enable = true;
   # programs.nushell.enable = true;
   hardware.graphics.enable = true; # vm issues?
   # Set the default editor to vim
