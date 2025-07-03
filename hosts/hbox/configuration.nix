@@ -43,9 +43,11 @@
     wget
     neovim
     helix
+    nushell
     niri
   ];
   programs.niri.enable = true;
+  programs.nushell.enable = true;
   hardware.graphics.enable = true; # vm issues?
   # Set the default editor to vim
   environment.variables.EDITOR = "helix";
