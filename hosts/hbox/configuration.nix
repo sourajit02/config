@@ -29,7 +29,7 @@
       variant = "colemak";
     };
   };
-  system.copySystemConfiguration = true;
+  # system.copySystemConfiguration = true; # cannot be used with nixos-anywhere
   services.openssh.enable = true;
   programs.firefox.enable = true;
   # Enable the Flakes feature and the accompanying new nix command-line tool
