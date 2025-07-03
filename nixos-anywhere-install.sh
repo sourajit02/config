@@ -1,4 +1,5 @@
 #!/bin/sh
+# (quickstart)[https://github.com/nix-community/nixos-anywhere/blob/main/docs/quickstart.md]
 #  root@localhost -p 2222 for local vm (local 2222 --> vm 22 configured in virtualbox)
 # might have to set target's password beforehand in order to use ssh
 # ssh root login is disabled after install, so password will not work
