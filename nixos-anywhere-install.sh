@@ -1,5 +1,7 @@
 #!/bin/sh
 #  root@localhost -p 2222 for local vm (local 2222 --> vm 22 configured in virtualbox)
+# might have to set target's password beforehand in order to use ssh
+# ssh root login is disabled after install, so password will not work
 nix run github:nix-community/nixos-anywhere -- --flake .#hbox --generate-hardware-config nixos-generate-config ./hosts/hbox/hardware-configuration.nix "$@"
 
 # set -e # instead of chaining &&s
