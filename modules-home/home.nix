@@ -9,7 +9,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "s";
-  home.homeDirectory = "/users/s";
+  home.homeDirectory = lib.mkForce "/users/s/home";
   xdg = {
     enable = true;
     configHome = "/users/s/config";
