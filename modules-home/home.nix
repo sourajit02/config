@@ -9,31 +9,37 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "s";
-  home.homeDirectory = lib.mkForce "/users/s/home";
-
-  programs.nushell = {
+  home.homeDirectory = "/users/s";
+  xdg = {
     enable = true;
-    configFile.text = ''
-      # Set HOME to the clean home directory after nushell loads
-      $env.HOME = "/users/s/home"
-
-      # Launch Niri if no display is set (console login)
-      if ($env.DISPLAY? | is-empty) {
-        cd $env.HOME
-        niri
-      }
-    '';
-
-    envFile.text = ''
-      # Initial HOME for nushell to load its config
-      $env.HOME = "/users/s/home"
-      # Set other XDG directories
-      $env.XDG_CONFIG_HOME = "/users/s/config"
-      $env.XDG_CACHE_HOME = "/users/s/config/cache"
-      $env.XDG_DATA_HOME = "/users/s/config/local/share"
-      $env.XDG_STATE_HOME = "/users/s/config/local/state"
-    '';
+    configHome = "/users/s/config";
+    cacheHome = "/users/s/config/cache";
+    dataHome = "/users/s/config/local/share";
+    stateHome = "/users/s/config/local/state";
   };
+  # programs.nushell = {
+  #   enable = true;
+  #   configFile.text = ''
+  #     # Set HOME to the clean home directory after nushell loads
+  #     $env.HOME = "/users/s/home"
+
+  #     # Launch Niri if no display is set (console login)
+  #     if ($env.DISPLAY? | is-empty) {
+  #       cd $env.HOME
+  #       niri
+  #     }
+  #   '';
+
+  #   envFile.text = ''
+  #     # Initial HOME for nushell to load its config
+  #     $env.HOME = "/users/s/home"
+  #     # Set other XDG directories
+  #     $env.XDG_CONFIG_HOME = "/users/s/config"
+  #     $env.XDG_CACHE_HOME = "/users/s/config/cache"
+  #     $env.XDG_DATA_HOME = "/users/s/config/local/share"
+  #     $env.XDG_STATE_HOME = "/users/s/config/local/state"
+  #   '';
+  # };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
