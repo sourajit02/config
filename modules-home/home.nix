@@ -21,7 +21,7 @@
 
     envFile.text = ''
       # Initial HOME for nushell to load its config
-      $env.HOME = "/users/s"
+      $env.HOME = "/users/s/home"
       # Set other XDG directories
       $env.XDG_CONFIG_HOME = "/users/s/config"
       $env.XDG_CACHE_HOME = "/users/s/config/cache"
