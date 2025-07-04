@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -12,6 +17,20 @@
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Limit the number of generations to keep
+  boot.loader.systemd-boot.configurationLimit = 10;
+  # Perform garbage collection weekly to maintain low disk usage
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
+  # Optimize storage
+  # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
+  nix.settings.auto-optimise-store = true;
+
+  nix.nixPath = [ "/users/s/config/nixcfg" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
@@ -41,7 +60,6 @@
     git # order matters, so git is first
     curl
     wget
-    neovim
     helix
     nushell
     niri
@@ -53,6 +71,7 @@
   environment.variables.EDITOR = "helix";
 
   users.users.s = {
+    # we change this to /users/s/home after login but before wm starts.
     home = "/users/s";
     isNormalUser = true;
     initialPassword = "password";

@@ -1,1 +1,5 @@
-# bundle other modules for easy import
+{
+  imports = [
+    ./home-manager.nix
+  ];
+}
