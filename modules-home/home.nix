@@ -4,7 +4,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "s";
-  home.homeDirectory = "/users/s";
+  home.homeDirectory = "/users/s/home";
 
   programs.nushell = {
     enable = true;
