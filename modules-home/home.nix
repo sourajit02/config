@@ -10,6 +10,9 @@
   # paths it should manage.
   home.username = "s";
   home.homeDirectory = lib.mkForce "/users/s/home";
+  home.sessionVariables = {
+    HOME_MANAGER_CONFIG = "/users/s/config";
+  };
   xdg = {
     enable = true;
     configHome = "/users/s/config";
