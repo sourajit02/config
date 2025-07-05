@@ -16,7 +16,7 @@
   # };
   xdg = {
     enable = true;
-    configHome = "/users/s/config";
+    configHome = "/users/s/state";
     cacheHome = "/users/s/state/cache";
     dataHome = "/users/s/state/local/share";
     stateHome = "/users/s/state/local/state";

@@ -94,7 +94,7 @@
         z = {
           group = "root";
           # mode = "0700";
-          user = "s"; # do not clutter without permission
+          user = "s"; # clutter without permission
         };
       };
       "/users/s/home" = {
