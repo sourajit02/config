@@ -32,6 +32,9 @@
         select = "underline";
       };
     };
+    programs.yazi = {
+      enable = true;
+    };
     languages.language = [
       {
         name = "nix";

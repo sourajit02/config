@@ -63,6 +63,7 @@
     curl
     wget
     helix
+    yazi
     nushell
     niri
   ];
