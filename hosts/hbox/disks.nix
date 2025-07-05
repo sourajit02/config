@@ -83,10 +83,10 @@
                     "noatime"
                   ];
                 };
-                "/users/s/config" = {
-                  mountpoint = "/users/s/config";
+                "/users/s/state" = {
+                  mountpoint = "/users/s/state";
                   mountOptions = [
-                    "subvol=s@config"
+                    "subvol=s@state"
                     "noatime"
                   ];
                 };
