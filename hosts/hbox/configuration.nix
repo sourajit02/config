@@ -73,7 +73,7 @@
 
   users.users.s = {
     # we change this to /users/s/home after login but before wm starts.
-    home = "/users/s";
+    home = "/users/s/home";
     isNormalUser = true;
     initialPassword = "password";
     shell = pkgs.nushell;
