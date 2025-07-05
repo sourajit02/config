@@ -22,7 +22,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager.useUserPackages = false; # use same nix store for user/sys
             home-manager.users.s = ./modules-home/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
