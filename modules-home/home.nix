@@ -8,19 +8,19 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  # home.username = "s";
-  # home.homeDirectory = "/users/s/home";
+  home.username = "s";
+  home.homeDirectory = "/users/s/home";
   # home.profileDirectory = "/users/s/config";
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
   # };
-  # xdg = {
-  #   enable = true;
-  #   configHome = "/users/s/config";
-  #   cacheHome = "/users/s/config/cache";
-  #   dataHome = "/users/s/config/local/share";
-  #   stateHome = "/users/s/config/local/state";
-  # };
+  xdg = {
+    enable = true;
+    configHome = "/users/s/config";
+    cacheHome = "/users/s/state/cache";
+    dataHome = "/users/s/state/local/share";
+    stateHome = "/users/s/state/local/state";
+  };
   # programs.nushell = {
   #   enable = true;
   #   configFile.text = ''

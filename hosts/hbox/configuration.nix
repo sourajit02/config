@@ -105,7 +105,7 @@
           user = "s";
         };
       };
-      "/users/s/config" = {
+      "/users/s/state" = {
         # Z for recursive
         z = {
           group = "root";
