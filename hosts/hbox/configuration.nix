@@ -96,6 +96,7 @@
           # mode = "0700";
           user = "s";
         };
+      };
       "/users/s/home" = {
         # Z for recursive
         z = {
