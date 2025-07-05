@@ -75,6 +75,7 @@
     home = "/users/s";
     isNormalUser = true;
     initialPassword = "password";
+    shell = pkgs.nushell;
     extraGroups = [
       "wheel"
       "networkmanager"

@@ -8,11 +8,11 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "s";
-  home.homeDirectory = "/users/s";
-  home.sessionVariables = {
-    HOME_MANAGER_CONFIG = "/users/s/config";
-  };
+  # home.username = "s";
+  # home.homeDirectory = "/users/s";
+  # home.sessionVariables = {
+  #   HOME_MANAGER_CONFIG = "/users/s/config";
+  # };
   xdg = {
     enable = true;
     configHome = "/users/s/config";
@@ -54,5 +54,5 @@
   # changes in each release.
   home.stateVersion = "25.11";
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  progsrams.home-manager.enable = true;
 }
