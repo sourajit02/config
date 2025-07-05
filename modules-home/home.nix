@@ -9,7 +9,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "s";
-  home.homeDirectory = "/users/s/home";
+  # home.homeDirectory = "/users/s/home";
   # home.profileDirectory = "/users/s/config";
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
