@@ -21,6 +21,9 @@
     dataHome = "/users/s/state/local/share";
     stateHome = "/users/s/state/local/state";
   };
+  programs.yazi = {
+    enable = true;
+  };
 
   programs.helix = {
     enable = true;
@@ -31,9 +34,6 @@
         insert = "bar";
         select = "underline";
       };
-    };
-    programs.yazi = {
-      enable = true;
     };
     languages.language = [
       {
