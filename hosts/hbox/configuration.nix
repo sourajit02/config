@@ -51,6 +51,8 @@
   # system.copySystemConfiguration = true; # cannot be used with nixos-anywhere
   services.openssh.enable = true;
   programs.firefox.enable = true;
+  programs.home-manager.enable = true;
+
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [
     "nix-command"
