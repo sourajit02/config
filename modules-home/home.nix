@@ -13,13 +13,13 @@
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
   # };
-  xdg = {
-    enable = true;
-    configHome = "/users/s/config";
-    cacheHome = "/users/s/config/cache";
-    dataHome = "/users/s/config/local/share";
-    stateHome = "/users/s/config/local/state";
-  };
+  # xdg = {
+  #   enable = true;
+  #   configHome = "/users/s/config";
+  #   cacheHome = "/users/s/config/cache";
+  #   dataHome = "/users/s/config/local/share";
+  #   stateHome = "/users/s/config/local/state";
+  # };
   # programs.nushell = {
   #   enable = true;
   #   configFile.text = ''
