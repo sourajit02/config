@@ -64,6 +64,7 @@
     wget
     helix
     yazi
+    alacritty
     nushell
     niri
   ];
