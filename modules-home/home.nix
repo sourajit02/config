@@ -8,7 +8,7 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "s";
+  # home.username = "s";
   # home.homeDirectory = "/users/s/home";
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
