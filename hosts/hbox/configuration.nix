@@ -89,6 +89,13 @@
   # transfer ownership to s
   systemd.tmpfiles.settings = {
     "10-give-s-ownership" = {
+      "/users/s" = {
+        # Z for recursive
+        z = {
+          group = "root";
+          # mode = "0700";
+          user = "s";
+        };
       "/users/s/home" = {
         # Z for recursive
         z = {
