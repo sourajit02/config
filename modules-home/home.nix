@@ -11,11 +11,6 @@
   # home.username = "s";
   # home.homeDirectory = /users/s/state;
   home.preferXdgDirectories = true;
-  home.persistence."/persist/home/s" = {
-    directories = [
-      "nixcfg"
-    ];
-  };
   # home.profileDirectory = "/users/s/state";
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
