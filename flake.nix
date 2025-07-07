@@ -23,6 +23,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true; # install packages to /etc/profiles
+            home-manager.backupFileExtension = "backup";
             home-manager.users.s = ./modules-home/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
