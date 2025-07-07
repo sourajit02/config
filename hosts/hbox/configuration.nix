@@ -90,7 +90,7 @@
     createHome = true;
   };
 
-  boot.initrd.postResuemeCommands = lib.mkAfter ''
+  boot.initrd.postResumeCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/sda /btrfs_tmp
     if [[ -e /btrfs_tmp/root ]]; then
@@ -114,6 +114,16 @@
     btrfs subvolume create /btrfs_tmp/root
     umount /btrfs_tmp
   '';
+
+  # Use /persist as the persistence root, matching Disko's mountpoint
+  environment.persistence."/nix/persist" = {
+    hideMounts = true;
+    directories = [
+      "/etc"
+    ];
+    files = [
+    ];
+  };
 
   # transfer ownership to s
   # systemd.tmpfiles.settings = {

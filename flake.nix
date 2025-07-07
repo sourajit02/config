@@ -8,6 +8,9 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    impermanence.url = "github:nix-community/impermanence";
+    impermanence.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     { self, nixpkgs, ... }@inputs:
@@ -19,6 +22,7 @@
           ./hosts/hbox/configuration.nix
           ./hosts/hbox/hardware-configuration.nix
           disko.nixosModules.disko
+          inputs.impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
