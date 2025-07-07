@@ -9,9 +9,8 @@
 {
 
   imports = [
-    inputs.impermanence.nixosModules.homeManagerModules.impermanence
+    inputs.impermanence.homeManagerModules.impermanence
   ];
-
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   # home.username = "s";
