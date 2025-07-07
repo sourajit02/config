@@ -32,17 +32,17 @@
 
   programs.nushell = {
     enable = true;
-
-    configFile.text = ''
-      $env.config = {
-        history: {
-          max_size: 1_000_000
-          sync_on_enter: true
-          files_format: "sqlite"
-          isolation: false
-        }
-      }
-    '';
+    settings = {
+      show_banner = false;
+      completions.external = {
+        enable = true;
+        max_results = 200;
+      };
+      max_size = 1000000;
+      sync_on_enter = true;
+      files_format = "sqlite";
+      isolation = false;
+    };
   };
   programs.helix = {
     enable = true;
