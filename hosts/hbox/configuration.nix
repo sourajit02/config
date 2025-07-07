@@ -94,14 +94,11 @@
     echo "DEBUG: postResumeCommands starting" >> /dev/kmsg
       mkdir /btrfs_tmp
       mount /dev/disk/by-partlabel/disk-primary-internal /btrfs_tmp
-
-      echo "DEBUG: Contents of /btrfs_tmp:" >> /dev/kmsg
-      ls -la /btrfs_tmp >> /dev/kmsg
-
-      if [[ -d /btrfs_tmp/root/TEST ]]; then
-        echo "DEBUG: Found /TEST, attempting to remove" >> /dev/kmsg
-        rm -rf /btrfs_tmp/root/TEST
-        echo "DEBUG: /TEST removal attempted" >> /dev/kmsg
+      
+      if [[ -e /btrfs_tmp/root ]]; then
+        mkdir -p /btrfs_tmp/old_roots
+        timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/root)" "+%Y-%m-%-d_%H:%M:%S")
+        mv /btrfs_tmp/root "/btrfs_tmp/old_roots/$timestamp"
       fi
 
       delete_subvolume_recursively() {
