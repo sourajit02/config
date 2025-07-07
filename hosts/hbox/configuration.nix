@@ -97,23 +97,27 @@
         # Z for recursive
         z = {
           group = "users";
-          # mode = "0700";
           user = "s"; # clutter without permission
         };
       };
       "/users/s/home" = {
         # Z for recursive
-        z = {
+        Z = {
           group = "users";
-          # mode = "0700";
           user = "s";
+        };
+      };
+      "/users/s/home" = {
+        # Z for recursive
+        z = {
+          group = "root";
+          user = "root"; # write protect
         };
       };
       "/users/s/state" = {
         # Z for recursive
         z = {
           group = "users";
-          # mode = "0700";
           user = "s";
         };
       };
