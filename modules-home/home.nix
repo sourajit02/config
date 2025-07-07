@@ -9,7 +9,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "s";
-  home.homeDirectory = "/users/s/state";
+  home.homeDirectory = /users/s/state;
   home.preferXdgDirectories = true;
   # home.profileDirectory = "/users/s/state";
   # home.sessionVariables = {
@@ -18,20 +18,14 @@
   # nix.settings.use-xdg-base-directories = true; # This will use XDG directories
   xdg = {
     enable = true;
-    configHome = "/users/s/state";
-    cacheHome = "/users/s/state/cache";
-    dataHome = "/users/s/home/.local/share";
-    stateHome = "/users/s/home/.local/state";
+    configHome = /users/s/state/.config;
+    cacheHome = /users/s/state/cache;
+    dataHome = /users/s/home/.local/share;
+    stateHome = /users/s/home/.local/state;
   };
-  programs.yazi = {
-    enable = true;
-  };
-  programs.alacritty = {
-    enable = true;
-  };
-
   programs.nushell = {
     enable = true;
+    configFile.source = /users/s/state/nushell/
     settings = {
       show_banner = false;
       completions.external = {
@@ -44,6 +38,13 @@
       history.isolation = false;
     };
   };
+  programs.yazi = {
+    enable = true;
+  };
+  programs.alacritty = {
+    enable = true;
+  };
+
   programs.helix = {
     enable = true;
     settings = {
