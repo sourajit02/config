@@ -115,8 +115,7 @@
     umount /btrfs_tmp
   '';
 
-  # Use /persist as the persistence root, matching Disko's mountpoint
-  environment.persistence."/nix/persist" = {
+  environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
       "/etc"
