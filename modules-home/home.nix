@@ -2,10 +2,16 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 
 {
+
+  imports = [
+    inputs.impermanence.nixosModules.home-manager.impermanence
+  ];
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   # home.username = "s";
