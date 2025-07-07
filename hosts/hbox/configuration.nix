@@ -95,7 +95,7 @@
       "/users/s" = {
         # Z for recursive
         z = {
-          group = "root";
+          group = "users";
           # mode = "0700";
           user = "s"; # clutter without permission
         };
@@ -103,7 +103,7 @@
       "/users/s/home" = {
         # Z for recursive
         z = {
-          group = "root";
+          group = "users";
           # mode = "0700";
           user = "s";
         };
@@ -111,7 +111,7 @@
       "/users/s/state" = {
         # Z for recursive
         z = {
-          group = "root";
+          group = "users";
           # mode = "0700";
           user = "s";
         };
