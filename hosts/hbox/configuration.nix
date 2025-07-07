@@ -90,7 +90,7 @@
     createHome = true;
   };
 
-  boot.initrd.postResumeCommands = lib.mkAfter ''
+  boot.initrd.postResuemeCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/sda /btrfs_tmp
     if [[ -e /btrfs_tmp/root ]]; then
