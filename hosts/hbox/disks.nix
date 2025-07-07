@@ -68,34 +68,6 @@
                     "noatime"
                   ];
                 };
-                # "/users" = {
-                #   mountpoint = "/users";
-                #   mountOptions = [
-                #     "subvol=users"
-                #     "noatime"
-                #   ];
-                # };
-                # "/users/s" = {
-                #   mountpoint = "/users/s";
-                #   mountOptions = [
-                #     "subvol=s"
-                #     "noatime"
-                #   ];
-                # };
-                # "/users/s/home" = {
-                #   mountpoint = "/users/s/home";
-                #   mountOptions = [
-                #     "subvol=s@home"
-                #     "noatime"
-                #   ];
-                # };
-                # "/users/s/state" = {
-                #   mountpoint = "/users/s/state";
-                #   mountOptions = [
-                #     "subvol=s@state"
-                #     "noatime"
-                #   ];
-                # };
               };
             };
           };
@@ -103,6 +75,6 @@
       };
     };
   };
-  # fileSystems."/persist".neededForBoot = true;
-  # fileSystems."/var/log".neededForBoot = true;
+  fileSystems."/persist".neededForBoot = true;
+  fileSystems."/var/log".neededForBoot = true;
 }
