@@ -121,6 +121,7 @@
     hideMounts = true;
     directories = [
       "/etc"
+      "/lib64"
     ];
     files = [
     ];
