@@ -126,6 +126,12 @@
     ];
   };
 
+  home.persistence."/persist/home/s" = {
+    directories = [
+      "nixcfg"
+    ];
+  };
+
   # transfer ownership to s
   # systemd.tmpfiles.settings = {
   #   "10-give-s-ownership" = {
