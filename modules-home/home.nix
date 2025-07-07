@@ -25,7 +25,7 @@
   };
   programs.nushell = {
     enable = true;
-    configFile.source = /users/s/state/nushell/
+    # configFile.source = /users/s/state/nushell/;
     settings = {
       show_banner = false;
       completions.external = {
