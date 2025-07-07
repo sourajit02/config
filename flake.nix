@@ -17,7 +17,7 @@
     {
       nixosConfigurations.hbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        extraSpecialArgs = { inherit inputs; }; # pass inputs to the modules below
+        specialArgs = { inherit inputs; }; # pass inputs to the modules below
         modules = with inputs; [
           ./hosts/hbox/configuration.nix
           ./hosts/hbox/hardware-configuration.nix
