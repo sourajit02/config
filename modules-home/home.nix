@@ -8,8 +8,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "s";
-  home.homeDirectory = /users/s/state;
+  # home.username = "s";
+  # home.homeDirectory = /users/s/state;
   home.preferXdgDirectories = true;
   # home.profileDirectory = "/users/s/state";
   # home.sessionVariables = {
