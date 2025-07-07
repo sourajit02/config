@@ -31,7 +31,7 @@
   nix.settings.auto-optimise-store = true;
 
   # nix.nixPath = [ "/users/s/config/nixcfg" ];
-  nix.nixPath = [ "/users/s/nixcfg" ];
+  nix.nixPath = [ "/home/s/nixcfg" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
@@ -86,7 +86,7 @@
       "audio"
       "video"
     ];
-    createHome = false;
+    createHome = true;
   };
 
   # transfer ownership to s

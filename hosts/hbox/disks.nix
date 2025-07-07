@@ -61,10 +61,10 @@
                     "noatime"
                   ];
                 };
-                "/home/s" = {
-                  mountpoint = "/home/s";
+                "/home" = {
+                  mountpoint = "/home";
                   mountOptions = [
-                    "subvol=s"
+                    "subvol=home"
                     "noatime"
                   ];
                 };
