@@ -20,8 +20,8 @@
     enable = true;
     configHome = "/users/s/state";
     cacheHome = "/users/s/state/cache";
-    dataHome = "/users/s/state/local/share";
-    stateHome = "/users/s/state/local/state";
+    dataHome = "/users/s/home/.local/share";
+    stateHome = "/users/s/home/.local/state";
   };
   programs.yazi = {
     enable = true;
@@ -30,6 +30,20 @@
     enable = true;
   };
 
+  programs.nushell = {
+    enable = true;
+
+    configFile.text = ''
+      $env.config = {
+        history: {
+          max_size: 100000
+          sync_on_enter: true
+          file_format: "sqlite"
+          isolation: false  # share history across sessions
+        }
+      }
+    '';
+  };
   programs.helix = {
     enable = true;
     settings = {
