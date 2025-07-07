@@ -99,6 +99,10 @@
         mv /btrfs_tmp/root "/btrfs_tmp/old_roots/$timestamp"
     fi
 
+    if [[ -d /btrfs_tmp/root/TEST ]]; then
+        rm -rf /btrfs_tmp/root/TEST
+    fi
+
     delete_subvolume_recursively() {
         IFS=$'\n'
         for i in $(btrfs subvolume list -o "$1" | cut -f 9- -d ' '); do
