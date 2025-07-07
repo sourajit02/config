@@ -40,7 +40,7 @@
       };
       max_size = 1000000;
       sync_on_enter = true;
-      files_format = "seqlite";
+      file_format = "sqlite";
       isolation = false;
     };
   };
