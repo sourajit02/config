@@ -102,7 +102,7 @@
       };
       "/users/s/home" = {
         # Z for recursive
-        Z = {
+        z = {
           group = "root";
           # mode = "0700";
           user = "s";
