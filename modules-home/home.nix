@@ -10,7 +10,7 @@
   # paths it should manage.
   home.username = "s";
   # home.homeDirectory = "/users/s/home";
-  home.profileDirectory = "/users/s/state";
+  # home.profileDirectory = "/users/s/state";
   nix.settings.use-xdg-base-directories = true; # This will use XDG directories
   # home.sessionVariables = {
   #   HOME_MANAGER_CONFIG = "/users/s/config";
