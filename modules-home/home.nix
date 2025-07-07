@@ -16,16 +16,15 @@
   #   HOME_MANAGER_CONFIG = "/users/s/config";
   # };
   # nix.settings.use-xdg-base-directories = true; # This will use XDG directories
-  xdg = {
-    enable = true;
-    configHome = /users/s/state/.config;
-    cacheHome = /users/s/state/cache;
-    dataHome = /users/s/home/.local/share;
-    stateHome = /users/s/home/.local/state;
-  };
+  # xdg = {
+  #   enable = true;
+  #   configHome = /users/s/state/.config;
+  #   cacheHome = /users/s/state/cache;
+  #   dataHome = /users/s/home/.local/share;
+  #   stateHome = /users/s/home/.local/state;
+  # };
   programs.nushell = {
     enable = true;
-    # configFile.source = /users/s/state/nushell/;
     settings = {
       show_banner = false;
       completions.external = {

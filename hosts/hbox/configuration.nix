@@ -76,8 +76,7 @@
   environment.variables.EDITOR = "helix";
 
   users.users.s = {
-    # we change this to /users/s/home after login but before wm starts.
-    home = "/users/s/state";
+    home = "/home/s";
     isNormalUser = true;
     initialPassword = "password";
     shell = pkgs.nushell;
@@ -87,40 +86,40 @@
       "audio"
       "video"
     ];
-    createHome = false;
+    createHome = true;
   };
 
   # transfer ownership to s
-  systemd.tmpfiles.settings = {
-    "10-give-s-ownership" = {
-      "/users/s" = {
-        # Z for recursive
-        z = {
-          group = "users";
-          user = "s"; # clutter without permission
-        };
-      };
-      "/users/s/home" = {
-        # Z for recursive
-        Z = {
-          group = "users";
-          user = "s";
-        };
-      };
-      "/users/s/home" = {
-        # Z for recursive
-        z = {
-          group = "root";
-          user = "root"; # write protect
-        };
-      };
-      "/users/s/state" = {
-        # Z for recursive
-        z = {
-          group = "users";
-          user = "s";
-        };
-      };
-    };
-  };
+  # systemd.tmpfiles.settings = {
+  #   "10-give-s-ownership" = {
+  #     "/users/s" = {
+  #       # Z for recursive
+  #       z = {
+  #         group = "users";
+  #         user = "s"; # clutter without permission
+  #       };
+  #     };
+  #     "/users/s/home" = {
+  #       # Z for recursive
+  #       Z = {
+  #         group = "users";
+  #         user = "s";
+  #       };
+  #     };
+  #     "/users/s/home" = {
+  #       # Z for recursive
+  #       z = {
+  #         group = "root";
+  #         user = "root"; # write protect
+  #       };
+  #     };
+  #     "/users/s/state" = {
+  #       # Z for recursive
+  #       z = {
+  #         group = "users";
+  #         user = "s";
+  #       };
+  # };
+  # };
+  # };
 }
