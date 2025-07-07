@@ -38,8 +38,8 @@
         enable = true;
         max_results = 200;
       };
-      max_size = 1000000;
-      sync_on_enter = true;
+      history.max_size = 1000000;
+      history.sync_on_enter = true;
       history.file_format = "sqlite";
       history.isolation = false;
     };
