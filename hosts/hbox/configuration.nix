@@ -86,7 +86,7 @@
       "audio"
       "video"
     ];
-    createHome = true;
+    createHome = false;
   };
 
   # transfer ownership to s

@@ -61,35 +61,41 @@
                     "noatime"
                   ];
                 };
-
-                "/users" = {
-                  mountpoint = "/users";
-                  mountOptions = [
-                    "subvol=users"
-                    "noatime"
-                  ];
-                };
-                "/users/s" = {
-                  mountpoint = "/users/s";
+                "/home/s" = {
+                  mountpoint = "/home/s";
                   mountOptions = [
                     "subvol=s"
                     "noatime"
                   ];
                 };
-                "/users/s/home" = {
-                  mountpoint = "/users/s/home";
-                  mountOptions = [
-                    "subvol=s@home"
-                    "noatime"
-                  ];
-                };
-                "/users/s/state" = {
-                  mountpoint = "/users/s/state";
-                  mountOptions = [
-                    "subvol=s@state"
-                    "noatime"
-                  ];
-                };
+                # "/users" = {
+                #   mountpoint = "/users";
+                #   mountOptions = [
+                #     "subvol=users"
+                #     "noatime"
+                #   ];
+                # };
+                # "/users/s" = {
+                #   mountpoint = "/users/s";
+                #   mountOptions = [
+                #     "subvol=s"
+                #     "noatime"
+                #   ];
+                # };
+                # "/users/s/home" = {
+                #   mountpoint = "/users/s/home";
+                #   mountOptions = [
+                #     "subvol=s@home"
+                #     "noatime"
+                #   ];
+                # };
+                # "/users/s/state" = {
+                #   mountpoint = "/users/s/state";
+                #   mountOptions = [
+                #     "subvol=s@state"
+                #     "noatime"
+                #   ];
+                # };
               };
             };
           };
