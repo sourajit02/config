@@ -38,7 +38,7 @@
         history: {
           max_size: 1_000_000
           sync_on_enter: true
-          file_format: "sqelite"
+          files_format: "sqlite"
           isolation: false
         }
       }
