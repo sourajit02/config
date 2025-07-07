@@ -41,7 +41,7 @@
       max_size = 1000000;
       sync_on_enter = true;
       history.file_format = "sqlite";
-      isolation = false;
+      history.isolation = false;
     };
   };
   programs.helix = {
