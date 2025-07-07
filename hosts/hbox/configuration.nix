@@ -93,7 +93,7 @@
   boot.initrd.postResumeCommands = lib.mkAfter ''
     echo "DEBUG: postResumeCommands starting" >> /dev/kmsg
       mkdir /btrfs_tmp
-      mount /dev/sda /btrfs_tmp
+      mount /dev/disk/by-partlabel/disk-primary-internal /btrfs_tmp
 
       echo "DEBUG: Contents of /btrfs_tmp:" >> /dev/kmsg
       ls -la /btrfs_tmp >> /dev/kmsg
