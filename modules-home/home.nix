@@ -2,14 +2,14 @@
   config,
   pkgs,
   lib,
-  inputs,
+  impermanence,
   ...
 }:
 
 {
 
   imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
+    impermanence.nixosModules.home-manager.impermanence
   ];
 
   # Home Manager needs a bit of information about you and the
