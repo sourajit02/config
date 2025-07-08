@@ -132,9 +132,12 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
+      "/var/log"
+      "/var/lib/nixos"
     ];
     files = [
     ];
+    # do not use home-manager's impermanence module as it comes with fuse performance penalty
     users.s = {
       directories = [
         "nixcfg"
