@@ -8,6 +8,9 @@
 
 {
   home.preferXdgDirectories = true;
+  xdg = {
+    dataHome = "/home/s/.local/share";
+  };
   programs.nushell = {
     enable = true;
     extraConfig = ''
