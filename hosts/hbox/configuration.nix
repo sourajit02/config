@@ -131,7 +131,7 @@
         ".local"
       ];
       files = [
-        ".nix-profile"
+        # ".nix-profile"
       ];
     };
   };
