@@ -125,7 +125,6 @@
       done      
 
       btrfs subvolume create /btrfs_tmp/root
-      btrfs subvolume create /btrfs_tmp/home
       umount /btrfs_tmp
   '';
 
