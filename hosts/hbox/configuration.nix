@@ -123,6 +123,10 @@
       "/var/lib/nixos"
     ];
     files = [
+      "/etc/passwd"
+      "/etc/group"
+      "/etc/shadow"
+      "/etc/gshadow"
     ];
     # do not use home-manager's impermanence module as it comes with fuse performance penalty
     users.s = {
