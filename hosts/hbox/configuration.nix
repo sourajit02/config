@@ -135,7 +135,6 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      # "/var/log"
       "/var/lib/nixos"
     ];
     files = [
@@ -144,6 +143,9 @@
     users.s = {
       directories = [
         "nixcfg"
+      ];
+      files = [
+        ".nix-profile"
       ];
     };
   };
