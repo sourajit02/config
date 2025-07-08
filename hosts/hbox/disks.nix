@@ -61,13 +61,13 @@
                     "noatime"
                   ];
                 };
-                "/home" = {
-                  mountpoint = "/home";
-                  mountOptions = [
-                    "subvol=home"
-                    "noatime"
-                  ];
-                };
+                # "/home" = {
+                #   mountpoint = "/home";
+                #   mountOptions = [
+                #     "subvol=home"
+                #     "noatime"
+                #   ];
+                # };
               };
             };
           };
