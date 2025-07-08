@@ -8,9 +8,9 @@
 
 {
 
-  imports = [
-    inputs.impermanence.homeManagerModules.impermanence
-  ];
+  # imports = [
+  #   inputs.impermanence.homeManagerModules.impermanence
+  # ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   # home.username = "s";
