@@ -127,8 +127,7 @@
       btrfs subvolume create /btrfs_tmp/root
       
       btrfs subvolume create /btrfs_tmp/home
-      chown root:root /btrfs_tmp/home
-      chmod 755 /btrfs_tmp/home
+      chown s:users /btrfs_tmp/home/s
       
       umount /btrfs_tmp
   '';
