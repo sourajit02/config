@@ -27,6 +27,9 @@
   # };
   programs.nushell = {
     enable = true;
+    shellAliases = {
+      nrs = "git pull; sudo nixos-rebuild switch --flake";
+    };
     settings = {
       show_banner = false;
       completions.external = {
