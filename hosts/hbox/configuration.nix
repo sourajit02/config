@@ -128,6 +128,7 @@
     users.s = {
       directories = [
         "nixcfg"
+        ".local"
       ];
       files = [
         ".nix-profile"
