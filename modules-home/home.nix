@@ -27,9 +27,10 @@
   # };
   programs.nushell = {
     enable = true;
-    shellAliases = {
-      nrs = "cd /home/s/nixcfg; git pull; sudo nixos-rebuild switch --flake";
-    };
+    extraConfig = ''
+      alias nrs = "cd /home/s/nixcfg; git pull; sudo nixos-rebuild switch --flake";
+    '';
+
     settings = {
       show_banner = false;
       completions.external = {
