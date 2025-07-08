@@ -121,10 +121,14 @@
     hideMounts = true;
     directories = [
       "/etc"
-      "/home/s/nixcfg"
     ];
     files = [
     ];
+    users.s = {
+      directories = [
+        "nixcfg"
+      ];
+    };
   };
 
   # transfer ownership to s
