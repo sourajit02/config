@@ -120,8 +120,6 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      "/var/lib/nixos"
-      "/etc"
     ];
     files = [
     ];

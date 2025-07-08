@@ -15,7 +15,7 @@
             cd /home/s/nixcfg
             git pull
             sudo nixos-rebuild switch --flake
-            sudo reboot
+            reboot
           }
     '';
     settings = {
