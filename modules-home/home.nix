@@ -7,6 +7,8 @@
 }:
 
 {
+  home.username = "s";
+  home.homeDirectory = "/home/s";
   # home.preferXdgDirectories = true;
   programs.nushell = {
     enable = true;
