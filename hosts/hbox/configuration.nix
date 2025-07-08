@@ -121,6 +121,7 @@
     hideMounts = true;
     directories = [
       "/etc"
+      "/home/s/nixcfg"
     ];
     files = [
     ];
