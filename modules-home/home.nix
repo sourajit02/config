@@ -14,7 +14,8 @@
       def nrs [] {
             cd /home/s/nixcfg
             git pull
-            sudo nixos-rebuild switch --reboot --flake
+            sudo nixos-rebuild switch --flake
+            reboot
           }
     '';
     settings = {
