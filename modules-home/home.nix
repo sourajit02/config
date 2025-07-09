@@ -7,6 +7,10 @@
 }:
 
 {
+  home.packages = with pkgs; [
+    trash-cli
+  ];
+
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -30,14 +34,7 @@
     };
   };
 
-  home.packages = with pkgs; [
-    trash-cli
-  ];
-
   programs.yazi = {
-    enable = true;
-  };
-  programs.trash-cli = {
     enable = true;
   };
   programs.alacritty = {
