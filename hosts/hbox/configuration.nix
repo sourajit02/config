@@ -63,7 +63,6 @@
     git # order matters, so git is first
     curl
     wget
-    trash-cli
     helix
     yazi
     alacritty

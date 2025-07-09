@@ -7,9 +7,6 @@
 }:
 
 {
-  home.username = "s";
-  home.homeDirectory = "/home/s";
-  # home.preferXdgDirectories = true;
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -34,6 +31,9 @@
   };
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.trash-cli = {
     enable = true;
   };
   programs.alacritty = {
