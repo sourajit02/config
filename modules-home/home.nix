@@ -30,6 +30,10 @@
     };
   };
 
+  home.packages = with pkgs; [
+    trash-cli
+  ];
+
   programs.yazi = {
     enable = true;
   };
