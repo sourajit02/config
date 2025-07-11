@@ -118,7 +118,6 @@
   '';
   environment.persistence."/persist" = {
     hideMounts = true;
-    allowTrash = true;
     directories = [
     ];
     files = [
@@ -126,7 +125,7 @@
     # do not use home-manager's impermanence module as it comes with fuse performance penalty
     users.s = {
       directories = [
-        ".local/share/Trash"
+        # ".local/share/Trash"
         "nixcfg"
       ];
       files = [
