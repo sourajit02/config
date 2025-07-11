@@ -207,10 +207,12 @@
         directories = [
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
-          # ".local/share/Trash"
+          {
+            directory = ".local/share/Trash";
+            how = "symlink";
+          }
           "nixcfg"
           "downloads"
-          ".local/share"
           ".local/state"
           {
             directory = ".ssh";
