@@ -126,7 +126,7 @@
     users.s = {
       directories = [
         "nixcfg"
-        ".local"
+        # ".local"
       ];
       files = [
       ];
