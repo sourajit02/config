@@ -210,6 +210,8 @@
           {
             directory = ".local/share/Trash";
             how = "symlink";
+            parent.user = "s";
+            parent.group = "users";
           }
           "nixcfg"
           "downloads"
