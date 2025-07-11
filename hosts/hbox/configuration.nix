@@ -172,6 +172,7 @@
           # https://github.com/nix-community/impermanence/pull/243
           # ".local/share/Trash"
           "nixcfg"
+          "downloads"
         ];
         files = [
         ];
