@@ -125,7 +125,7 @@
     # do not use home-manager's impermanence module as it comes with fuse performance penalty
     users.s = {
       directories = [
-        ".local"
+        ".local/share/Trash"
         "nixcfg"
       ];
       files = [
