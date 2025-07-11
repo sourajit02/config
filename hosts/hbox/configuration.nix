@@ -133,7 +133,7 @@
     ];
     files = [
 
-      "/etc/machine-id"
+      # "/etc/machine-id"
       # {
       #   file = "/etc/nix/id_rsa";
       #   parentDirectory = {
