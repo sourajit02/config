@@ -83,7 +83,7 @@
       # "noatime"
       "mode=755"
       "nosuid"
-      "nodev"
+      # "nodev"
     ];
   };
 
