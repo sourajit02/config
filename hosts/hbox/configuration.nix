@@ -116,42 +116,55 @@
     btrfs subvolume create /btrfs_tmp/root
     umount /btrfs_tmp
   '';
-  environment.persistence."/persist" = {
-    hideMounts = true;
-    directories = [
-      "/var/lib/nixos"
-      "/var/lib/bluetooth"
-      "/var/lib/systemd/coredump"
-      "/var/lib/systemd/timers"
-      "/etc/NetworkManager/system-connections"
-      # {
-      #   directory = "/var/lib/colord";
-      #   user = "colord";
-      #   group = "colord";
-      #   mode = "u=rwx,g=rx,o=";
-      # }
-    ];
-    files = [
 
-      # "/etc/machine-id"
-      # {
-      #   file = "/etc/nix/id_rsa";
-      #   parentDirectory = {
-      #     mode = "u=rwx,g=,o=";
-      #   };
-      # }
-
-    ];
-    # do not use home-manager's impermanence module as it comes with fuse performance penalty
-    users.s = {
+  preservation = {
+    enable = true;
+    preserveAt."/persist" = {
       directories = [
-        # mounting issues, don't persist for now
-        # https://github.com/nix-community/impermanence/pull/243
-        # ".local/share/Trash"
-        "nixcfg"
+        "/var/lib/nixos"
       ];
       files = [
+        "/etc/machine-id"
       ];
     };
   };
+
+  # environment.persistence."/persist" = {
+  #   hideMounts = true;
+  #   directories = [
+  #     "/var/lib/nixos"
+  #     "/var/lib/bluetooth"
+  #     "/var/lib/systemd/coredump"
+  #     "/var/lib/systemd/timers"
+  #     "/etc/NetworkManager/system-connections"
+  #     # {
+  #     #   directory = "/var/lib/colord";
+  #     #   user = "colord";
+  #     #   group = "colord";
+  #     #   mode = "u=rwx,g=rx,o=";
+  #     # }
+  #   ];
+  #   files = [
+
+  #     # "/etc/machine-id"
+  #     # {
+  #     #   file = "/etc/nix/id_rsa";
+  #     #   parentDirectory = {
+  #     #     mode = "u=rwx,g=,o=";
+  #     #   };
+  #     # }
+
+  #   ];
+  #   # do not use home-manager's impermanence module as it comes with fuse performance penalty
+  #   users.s = {
+  #     directories = [
+  #       # mounting issues, don't persist for now
+  #       # https://github.com/nix-community/impermanence/pull/243
+  #       # ".local/share/Trash"
+  #       "nixcfg"
+  #     ];
+  #     files = [
+  #     ];
+  #   };
+  # };
 }
