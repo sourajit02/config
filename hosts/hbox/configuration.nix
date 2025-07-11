@@ -165,6 +165,17 @@
       files = [
         # "/etc/machine-id"
       ];
+
+      users.s = {
+        directories = [
+          # mounting issues, don't persist for now
+          # https://github.com/nix-community/impermanence/pull/243
+          # ".local/share/Trash"
+          "nixcfg"
+        ];
+        files = [
+        ];
+      };
     };
   };
 
@@ -195,15 +206,5 @@
 
   #   ];
   #   # do not use home-manager's impermanence module as it comes with fuse performance penalty
-  #   users.s = {
-  #     directories = [
-  #       # mounting issues, don't persist for now
-  #       # https://github.com/nix-community/impermanence/pull/243
-  #       # ".local/share/Trash"
-  #       "nixcfg"
-  #     ];
-  #     files = [
-  #     ];
-  #   };
   # };
 }
