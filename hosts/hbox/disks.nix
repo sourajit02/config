@@ -30,13 +30,13 @@
                 "-f"
               ];
               subvolumes = {
-                "/root" = {
-                  mountpoint = "/";
-                  mountOptions = [
-                    "subvol=root"
-                    "noatime"
-                  ];
-                };
+                # "/root" = {
+                #   mountpoint = "/";
+                #   mountOptions = [
+                #     "subvol=root"
+                #     "noatime"
+                #   ];
+                # };
                 "/nix" = {
                   mountpoint = "/nix";
                   mountOptions = [
@@ -75,6 +75,18 @@
       };
     };
   };
+
+  nodev."/" = {
+    fsType = "tmpfs";
+    mountOptions = [
+      # "relatime"
+      "noatime"
+      "mode=755"
+      "nosuid"
+      "nodev"
+    ];
+  };
+
   fileSystems."/persist".neededForBoot = true;
   fileSystems."/var/log".neededForBoot = true;
 }
