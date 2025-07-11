@@ -210,6 +210,7 @@
           {
             directory = ".local/share/Trash";
             how = "symlink";
+            configureParent = true;
             parent.user = "s";
             parent.group = "users";
           }
