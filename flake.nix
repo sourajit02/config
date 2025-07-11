@@ -11,7 +11,6 @@
 
     # impermanence.url = "github:nix-community/impermanence";
     preservation.url = "github:nix-community/preservation";
-    preservation.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     { self, nixpkgs, ... }@inputs:
