@@ -91,7 +91,7 @@
 
   # subvolumes other than root will still be persisted
   # check disko for what they are
-  boot.initrd.systemd.enable = true;
+  boot.initrd.systemd.enable = false;
 
   # boot.initrd.systemd.services.btrfs-root-cleanup = {
   #   description = "Clean up old btrfs root snapshots";
