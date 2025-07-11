@@ -163,7 +163,10 @@
         "/var/lib/nixos"
       ];
       files = [
-        # "/etc/machine-id"
+        {
+          file = "/etc/machine-id";
+          inInitrd = true;
+        }
       ];
 
       users.s = {
