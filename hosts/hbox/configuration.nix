@@ -209,6 +209,7 @@
           # https://github.com/nix-community/impermanence/pull/243
           {
             directory = ".local/share/Trash";
+            how = "bindmount";
             mountOptions = [ "x-gvfs-trash" ];
             # how = "symlink";
             # configureParent = true;
