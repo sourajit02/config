@@ -91,7 +91,6 @@
 
   # subvolumes other than root will still be persisted
   # check disko for what they are
-  boot.initrd.systemd.enable = false;
 
   # boot.initrd.systemd.services.btrfs-root-cleanup = {
   #   description = "Clean up old btrfs root snapshots";
@@ -156,6 +155,7 @@
   #   umount /btrfs_tmp
   # '';
 
+  boot.initrd.systemd.enable = true;
   preservation = {
     enable = true;
     preserveAt."/persist" = {
@@ -163,7 +163,7 @@
         "/var/lib/nixos"
       ];
       files = [
-        "/etc/machine-id"
+        # "/etc/machine-id"
       ];
     };
   };
