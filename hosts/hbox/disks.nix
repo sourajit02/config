@@ -79,8 +79,8 @@
   nodev."/" = {
     fsType = "tmpfs";
     mountOptions = [
-      # "relatime"
-      "noatime"
+      "relatime"
+      # "noatime"
       "mode=755"
       "nosuid"
       "nodev"
