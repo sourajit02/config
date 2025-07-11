@@ -91,6 +91,7 @@
 
   # subvolumes other than root will still be persisted
   # check disko for what they are
+  boot.initrd.systemd.enable = true;
   boot.initrd.postResumeCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/disk/by-partlabel/disk-primary-internal /btrfs_tmp
