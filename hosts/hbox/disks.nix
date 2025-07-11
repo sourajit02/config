@@ -3,13 +3,20 @@
   disko.devices = {
     nodev."/" = {
       fsType = "tmpfs";
+      # mountOptions = [
+      #   "relatime"
+      #   # "noatime"
+      #   "mode=755"
+      #   "nosuid"
+      #   "nodev"
+      # ];
+
       mountOptions = [
-        "relatime"
-        # "noatime"
+        "size=2G"
+        "defaults"
         "mode=755"
-        "nosuid"
-        "nodev"
       ];
+
     };
 
   };
