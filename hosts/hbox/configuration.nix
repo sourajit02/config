@@ -118,6 +118,7 @@
   '';
   environment.persistence."/persist" = {
     hideMounts = true;
+    allowTrash = true;
     directories = [
     ];
     files = [
