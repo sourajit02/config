@@ -209,12 +209,12 @@
           # https://github.com/nix-community/impermanence/pull/243
           {
             directory = ".local/share/Trash";
-            mountOptions = [ "x-gvfs-trash" ]
+            mountOptions = [ "x-gvfs-trash" ];
             # how = "symlink";
             # configureParent = true;
             # parent.user = "s";
             # parent.group = "users";
-            
+
           }
           "nixcfg"
           "downloads"
