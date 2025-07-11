@@ -1,5 +1,20 @@
 { lib, ... }:
 {
+
+  disko.devices = {
+    nodev."/" = {
+      fsType = "tmpfs";
+      mountOptions = [
+        "relatime"
+        # "noatime"
+        "mode=755"
+        "nosuid"
+        "nodev"
+      ];
+    };
+
+  };
+
   disko.devices.disk = {
     primary = {
       type = "disk";
@@ -75,18 +90,6 @@
       };
     };
   };
-
-  nodev."/" = {
-    fsType = "tmpfs";
-    mountOptions = [
-      "relatime"
-      # "noatime"
-      "mode=755"
-      "nosuid"
-      # "nodev"
-    ];
-  };
-
   fileSystems."/persist".neededForBoot = true;
   fileSystems."/var/log".neededForBoot = true;
 }
