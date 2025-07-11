@@ -120,8 +120,27 @@
     hideMounts = true;
     directories = [
       "/var/lib/nixos"
+      "/var/lib/bluetooth"
+      "/var/lib/systemd/coredump"
+      "/var/lib/systemd/timers"
+      "/etc/NetworkManager/system-connections"
+      # {
+      #   directory = "/var/lib/colord";
+      #   user = "colord";
+      #   group = "colord";
+      #   mode = "u=rwx,g=rx,o=";
+      # }
     ];
     files = [
+
+      "/etc/machine-id"
+      # {
+      #   file = "/etc/nix/id_rsa";
+      #   parentDirectory = {
+      #     mode = "u=rwx,g=,o=";
+      #   };
+      # }
+
     ];
     # do not use home-manager's impermanence module as it comes with fuse performance penalty
     users.s = {
