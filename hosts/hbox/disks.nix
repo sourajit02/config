@@ -74,14 +74,14 @@
                     "noatime"
                   ];
                 };
-                "/log" = {
-                  mountpoint = "/var/log";
-                  mountOptions = [
-                    "subvol=log"
-                    "compress=zstd"
-                    "noatime"
-                  ];
-                };
+                # "/log" = {
+                #   mountpoint = "/var/log";
+                #   mountOptions = [
+                #     "subvol=log"
+                #     "compress=zstd"
+                #     "noatime"
+                #   ];
+                # };
                 # "/home" = {
                 #   mountpoint = "/home";
                 #   mountOptions = [

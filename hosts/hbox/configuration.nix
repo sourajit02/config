@@ -160,27 +160,79 @@
     enable = true;
     preserveAt."/persist" = {
       directories = [
-        "/var/lib/nixos"
+        "/var/log"
+
+        "/etc/secureboot"
+        "/var/lib/bluetooth"
+        "/var/lib/fprint"
+        "/var/lib/fwupd"
+        "/var/lib/libvirt"
+        "/var/lib/power-profiles-daemon"
+        "/var/lib/systemd/coredump"
+        "/var/lib/systemd/rfkill"
+        "/var/lib/systemd/timers"
+
+        {
+          directory = "/var/lib/nixos";
+          inInitrd = true;
+        }
+
       ];
       files = [
+        "/var/lib/usbguard/rules.conf"
         {
           file = "/etc/machine-id";
           inInitrd = true;
+          how = "symlink";
+          configureParent = true;
         }
+
+        {
+          file = "/etc/ssh/ssh_host_rsa_key";
+          how = "symlink";
+          configureParent = true;
+        }
+        {
+          file = "/etc/ssh/ssh_host_ed25519_key";
+          how = "symlink";
+          configureParent = true;
+        }
+
       ];
 
       users.s = {
+        commonMountOptions = [
+          "x-gvfs-hide"
+        ];
         directories = [
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
           # ".local/share/Trash"
           "nixcfg"
           "downloads"
+          ".local/share"
+          ".local/state"
+          {
+            directory = ".ssh";
+            mode = "0700";
+          }
         ];
         files = [
         ];
       };
     };
+
+    systemd.services.systemd-machine-id-commit = {
+      unitConfig.ConditionPathIsMountPoint = [
+        ""
+        "/persistent/etc/machine-id"
+      ];
+      serviceConfig.ExecStart = [
+        ""
+        "systemd-machine-id-setup --commit --root /persistent"
+      ];
+    };
+
   };
 
   # environment.persistence."/persist" = {
