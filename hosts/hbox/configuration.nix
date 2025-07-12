@@ -68,7 +68,9 @@
     alacritty
     nushell
     niri
+    gvfs
   ];
+  services.gvfs.enable = true;
   programs.niri.enable = true;
   # programs.nushell.enable = true;
   hardware.graphics.enable = true; # vm issues?
