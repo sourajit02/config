@@ -81,7 +81,7 @@
     home = "/home/s";
     isNormalUser = true;
     # initialPassword = "password";
-    initialHashedPassword = "$y$j9T$PS95D2rMVAwSx4Ib50mTl/$.A13/JerAGCNDtPHRgyBDG.wgZ51YmX34sSr63tYo1A";
+    initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
     shell = pkgs.nushell;
     extraGroups = [
       "wheel"
