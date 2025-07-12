@@ -144,13 +144,13 @@
           {
             directory = ".local/share/Trash";
             # how = "bindmount";
-            # mountOptions = [ "x-gvfs-trash" ];
+            mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
             mode = "0777";
             # configureParent = true;
             # parent.user = "s";
             # parent.group = "users";
-            # parent.mode = "777";
+            # parent.mode = "0777";
           }
           "nixcfg"
           "downloads"
