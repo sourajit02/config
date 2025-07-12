@@ -14,8 +14,8 @@
   ];
 
   system.stateVersion = "25.11"; # never change this
-  # users.users.root.initialPassword = "password"; # install-script will prompt change for root and s
-  hashedPassword = "$6$69.FrUqakJxfyfUF$7kKuosQsBReTjbVit1lGqsdm.u0boPuFuzisJyctm18cZ3yH.V61pNXHsBfgu9K/IiU0cm2TxVUWAk3qdkMUh.";
+  users.users.root.initialPassword = "password"; # install-script will prompt change for root and s
+  # hashedPassword = "$6$69.FrUqakJxfyfUF$7kKuosQsBReTjbVit1lGqsdm.u0boPuFuzisJyctm18cZ3yH.V61pNXHsBfgu9K/IiU0cm2TxVUWAk3qdkMUh.";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
