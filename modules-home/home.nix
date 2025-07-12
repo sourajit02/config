@@ -8,9 +8,8 @@
 
 {
   home.packages = with pkgs; [
-    # trash-cli
-    gvfs
-    glib
+    trash-cli
+    # glib
   ];
 
   programs.nushell = {
