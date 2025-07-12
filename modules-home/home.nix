@@ -8,7 +8,7 @@
 
 {
   home.packages = with pkgs; [
-    trash-cli
+    # trash-cli
   ];
 
   programs.nushell = {
