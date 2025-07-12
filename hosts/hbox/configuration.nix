@@ -142,7 +142,7 @@
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
           {
-            directory = ".local/share/Trash";
+            directory = ".local/share/";
             # how = "bindmount";
             mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
