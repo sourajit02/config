@@ -212,6 +212,7 @@
             # how = "bindmount";
             # mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
+            mode = "777";
             configureParent = true;
             parent.user = "s";
             parent.group = "users";
