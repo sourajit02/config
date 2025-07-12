@@ -215,7 +215,7 @@
             configureParent = true;
             parent.user = "s";
             parent.group = "users";
-            parent.mode = "777"
+            parent.mode = "777";
 
           }
           "nixcfg"
