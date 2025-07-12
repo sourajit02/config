@@ -14,7 +14,8 @@
   ];
 
   system.stateVersion = "25.11"; # never change this
-  users.users.root.initialPassword = "password"; # install-script will prompt change for root and s
+  # users.users.root.initialPassword = "password"; # install-script will prompt change for root and s
+  hashedPassword = "$6$69.FrUqakJxfyfUF$7kKuosQsBReTjbVit1lGqsdm.u0boPuFuzisJyctm18cZ3yH.V61pNXHsBfgu9K/IiU0cm2TxVUWAk3qdkMUh.";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -78,7 +79,8 @@
   users.users.s = {
     home = "/home/s";
     isNormalUser = true;
-    initialPassword = "password";
+    # initialPassword = "password";
+    hashedPassword = "$6$69.FrUqakJxfyfUF$7kKuosQsBReTjbVit1lGqsdm.u0boPuFuzisJyctm18cZ3yH.V61pNXHsBfgu9K/IiU0cm2TxVUWAk3qdkMUh.";
     shell = pkgs.nushell;
     extraGroups = [
       "wheel"
@@ -141,17 +143,16 @@
         directories = [
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
-          {
-            directory = ".local/share/";
-            # how = "bindmount";
-            mountOptions = [ "x-gvfs-trash" ];
-            how = "symlink";
-            mode = "0777";
-            # configureParent = true;
-            # parent.user = "s";
-            # parent.group = "users";
-            # parent.mode = "0777";
-          }
+          # {
+          # directory = ".local/share/";
+          # mountOptions = [ "x-gvfs-trash" ];
+          # how = "symlink";
+          # mode = "0777";
+          # configureParent = true;
+          # parent.user = "s";
+          # parent.group = "users";
+          # parent.mode = "0777";
+          # }
           "nixcfg"
           "downloads"
           ".local/state"
