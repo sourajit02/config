@@ -76,6 +76,7 @@
   # Set the default editor to vim
   environment.variables.EDITOR = "helix";
 
+  users.mutableUsers = false;
   users.users.s = {
     home = "/home/s";
     isNormalUser = true;
