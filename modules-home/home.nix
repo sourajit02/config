@@ -9,6 +9,7 @@
 {
   home.packages = with pkgs; [
     trash-cli
+    qutebrowser
   ];
 
   programs.nushell = {
