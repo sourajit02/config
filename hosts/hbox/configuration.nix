@@ -73,7 +73,7 @@
 
   zramSwap = {
     enable = true;
-    memoryPercent = 60;
+    # memoryPercent = 60;
   };
   services.swapspace = {
     enable = true;
