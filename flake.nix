@@ -13,6 +13,10 @@
 
     sops-nix.url = "github:mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    niri-flake.url = "github:sodiboo/niri-flake";
+    niri-flake.inputs.nixpkgs.follows = "nixpkgs";
+
   };
   outputs =
     { self, nixpkgs, ... }@inputs:
@@ -27,6 +31,7 @@
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
           home-manager.nixosModules.home-manager
+          niri-flake.homeManagerModules.niri
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true; # install packages to /etc/profiles
