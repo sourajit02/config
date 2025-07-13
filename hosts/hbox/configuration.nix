@@ -162,7 +162,6 @@
           "nixcfg"
           "downloads"
           ".local/state"
-          ".config/nushell"
           {
             directory = ".ssh";
             mode = "0700";
@@ -171,6 +170,7 @@
         files = [
           {
             file = ".config/nushell/history.sqlite3";
+            mode = "0777";
           }
         ];
       };
