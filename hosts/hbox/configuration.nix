@@ -119,11 +119,6 @@
           directory = "/var/lib/nixos";
           inInitrd = true;
         }
-        {
-          directory = "/persist";
-          inInitrd = true;
-        }
-
       ];
       files = [
         "/var/lib/usbguard/rules.conf"
