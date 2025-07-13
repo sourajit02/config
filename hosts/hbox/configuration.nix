@@ -163,13 +163,11 @@
           }
         ];
         files = [
-          # ".config/nushell/history.sqlite3"
-          {
-            file = ".config/nushell/history.sqlite3";
-            how = "symlink";
-            # user = "s";
-            # group = "users";
-          }
+          ".config/nushell/history.sqlite3"
+          # {
+          #   file = ".config/nushell/history.sqlite3";
+          #   how = "symlink";
+          # }
 
         ];
       };
@@ -183,10 +181,6 @@
       user = "s";
       group = "users";
     };
-    # "/home/s/.config/nushell".d = {
-    #   user = "s";
-    #   group = "users";
-    # };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
