@@ -151,8 +151,8 @@
             directory = ".local/share/Trash";
             mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
-            user = "s";
-            group = "users";
+            # user = "s";
+            # group = "users";
           }
           "nixcfg"
           "downloads"
