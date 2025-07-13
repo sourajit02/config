@@ -182,6 +182,15 @@
     };
 
   };
+
+  systemd.tmpfiles.settings.preservation = {
+    "%h/.config".d = {
+      user = "s";
+      group = "users";
+      mode = "0755";
+    };
+  };
+
   systemd.services.systemd-machine-id-commit = {
     unitConfig.ConditionPathIsMountPoint = [
       ""
