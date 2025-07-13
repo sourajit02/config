@@ -147,19 +147,14 @@
           "x-gvfs-hide"
         ];
         directories = [
-          # mounting issues, don't persist for now
-          # https://github.com/nix-community/impermanence/pull/243
-          {
-            directory = ".local/share/Trash";
-            mountOptions = [ "x-gvfs-trash" ];
-            how = "symlink";
-            user = "s";
-            group = "users";
-            # configureParent = true;
-            # parent.user = "s";
-            # parent.group = "users";
-            # parent.mode = "0777";
-          }
+          ".local/share/Trash"
+          # {
+          #   directory = ".local/share/Trash";
+          #   mountOptions = [ "x-gvfs-trash" ];
+          #   how = "symlink";
+          #   user = "s";
+          #   group = "users";
+          # }
           "nixcfg"
           "downloads"
           ".local/state"
