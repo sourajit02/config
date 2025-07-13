@@ -157,13 +157,13 @@
           "nixcfg"
           "downloads"
           ".local/state"
-          ".config"
           {
             directory = ".ssh";
             mode = "0700";
           }
         ];
         files = [
+          ".config/nushell/history.sqlite3"
         ];
       };
     };
@@ -173,6 +173,10 @@
   # add directories here to set permissions correctly
   systemd.tmpfiles.settings.preservation = {
     "/home/s/.config".d = {
+      user = "s";
+      group = "users";
+    };
+    "/home/s/.config/nushell".d = {
       user = "s";
       group = "users";
     };
