@@ -86,6 +86,16 @@
       };
     };
   };
+
+  # modules = [
+  #   niri.homeModules.config
+  #   {
+  #     programs.niri.settings = {
+  #       outputs."eDP-1".scale = 2.0;
+  #     };
+  #   }
+  # ];
+
   programs.niri = {
     enable = true;
 
