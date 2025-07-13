@@ -171,6 +171,10 @@
           {
             file = ".config/nushell/history.sqlite3";
             how = "symlink";
+            configureParent = true;
+            parent.user = "s";
+            parent.group = "users";
+            parent.mode = "0777";
 
           }
         ];
