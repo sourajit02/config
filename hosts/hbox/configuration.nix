@@ -162,6 +162,7 @@
           "nixcfg"
           "downloads"
           ".local/state"
+          ".config/nushell"
           {
             directory = ".ssh";
             mode = "0700";
