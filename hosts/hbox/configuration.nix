@@ -95,6 +95,7 @@
     enable = true;
     preserveAt."/persist" = {
       directories = [
+        "/tmp" # manage ram ballooning
         "/var/log"
 
         "/etc/secureboot"
@@ -176,4 +177,9 @@
       "systemd-machine-id-setup --commit --root /persistent"
     ];
   };
+
+  systemd.tmpfiles.rules = [
+    "D /tmp 1777 root root 0" # Delete and recreate /tmp on boot
+  ];
+
 }
