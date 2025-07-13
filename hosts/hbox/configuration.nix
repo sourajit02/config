@@ -147,14 +147,13 @@
           "x-gvfs-hide"
         ];
         directories = [
-          ".local/share/Trash"
-          # {
-          #   directory = ".local/share/Trash";
-          #   mountOptions = [ "x-gvfs-trash" ];
-          #   how = "symlink";
-          #   user = "s";
-          #   group = "users";
-          # }
+          {
+            directory = ".local/share/Trash";
+            # mountOptions = [ "x-gvfs-trash" ];
+            how = "symlink";
+            user = "s";
+            group = "users";
+          }
           "nixcfg"
           "downloads"
           ".local/state"
