@@ -168,6 +168,7 @@
           }
         ];
         files = [
+          ".config/nushell/history.sqlite3"
         ];
       };
     };
