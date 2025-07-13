@@ -147,16 +147,14 @@
           "x-gvfs-hide"
         ];
         directories = [
-          {
-            directory = ".local/share/Trash";
-            mountOptions = [ "x-gvfs-trash" ];
-            how = "symlink";
-            # user = "s";
-            # group = "users";
-          }
           "nixcfg"
           "downloads"
           ".local/state"
+          # {
+          #   directory = ".local/share/Trash";
+          #   mountOptions = [ "x-gvfs-trash" ];
+          #   how = "symlink";
+          # }
           {
             directory = ".ssh";
             mode = "0700";
