@@ -104,6 +104,7 @@
       directories = [
         # "/tmp" # manage ram ballooning
         "/var/log"
+        "/persist"
 
         "/etc/secureboot"
         "/var/lib/bluetooth"
@@ -151,7 +152,7 @@
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
           {
-            directory = ".local/share/";
+            directory = ".local/share/Trash";
             mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
             user = "s";
