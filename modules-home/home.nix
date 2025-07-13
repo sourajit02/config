@@ -11,6 +11,9 @@
     trash-cli
     qutebrowser
   ];
+  programs.qutebrowser = {
+    enable = true;
+  };
 
   programs.nushell = {
     enable = true;
