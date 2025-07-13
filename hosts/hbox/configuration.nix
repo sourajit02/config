@@ -70,6 +70,15 @@
     nushell
     niri
   ];
+
+  zramSwap = {
+    enable = true;
+    memoryPercent = 60;
+  };
+  services.swapspace = {
+    enable = true;
+  };
+
   programs.niri.enable = true;
   # programs.nushell.enable = true;
   hardware.graphics.enable = true; # vm issues?
@@ -149,7 +158,6 @@
         directories = [
           "nixcfg"
           "downloads"
-          # ".local/state"
           # no need? .Trash-1000 being created per directory anyway
           # {
           #   directory = ".local/share/Trash";
