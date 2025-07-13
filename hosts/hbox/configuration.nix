@@ -59,7 +59,6 @@
     yazi
     alacritty
     nushell
-    niri
   ];
 
   zramSwap = {
@@ -70,7 +69,6 @@
     settings.max_swapsize = "128g";
   };
 
-  programs.niri.enable = true;
   hardware.graphics.enable = true;
   environment.variables.EDITOR = "helix";
 

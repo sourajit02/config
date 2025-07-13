@@ -8,6 +8,8 @@
 
 {
   home.packages = with pkgs; [
+    niri
+    waybar
     trash-cli
     qutebrowser
   ];
@@ -71,6 +73,30 @@
         "ui.background" = { };
       };
     };
+  };
+  programs.niri = {
+    enable = true;
+
+    settings = ''
+      input {
+        keyboard {
+          xkb {
+            layout "us"
+            variant "colemak"
+            // options "compose:ralt,ctrl:nocaps"
+          }
+        }
+      }
+
+      // Add other niri configuration here
+      layout {
+        gaps 2
+        center-focused-column "never"
+      }
+
+      spawn-at-startup "waybar"
+    '';
+
   };
 
   ## do not touch
