@@ -14,12 +14,20 @@
     sops-nix.url = "github:mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    niri-flake.url = "github:sodiboo/niri-flake";
-    niri-flake.inputs.nixpkgs.follows = "nixpkgs";
+    niri.url = "github:sodiboo/niri-flake";
+    niri.inputs.nixpkgs.follows = "nixpkgs";
+
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
 
   };
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      niri,
+      ...
+    }@inputs:
     {
       nixosConfigurations.hbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -31,7 +39,6 @@
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
           home-manager.nixosModules.home-manager
-          niri-flake.homeManagerModules.niri
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true; # install packages to /etc/profiles

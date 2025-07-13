@@ -10,9 +10,15 @@
   home.packages = with pkgs; [
     niri
     waybar
+    fuzzel
+    mako
     trash-cli
     qutebrowser
   ];
+
+  programs.waybar.settings.mainBar.layer = "top";
+  programs.waybar.systemd.enable = true;
+  programs.niri.settings.environment."NIXOS_OZONE_WL" = "1";
 
   home.sessionVariables = {
     XKB_DEFAULT_LAYOUT = "us";
