@@ -187,7 +187,8 @@
     "%h/.config".d = {
       user = "s";
       group = "users";
-      mode = "0755";
+      mode = "0777";
+      # mode = "0755";
     };
   };
 
