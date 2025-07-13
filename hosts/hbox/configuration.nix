@@ -183,14 +183,14 @@
       user = "s";
       group = "users";
     };
-    "/home/s/.local/share".d = {
-      user = "s";
-      group = "users";
-    };
-    "/home/s/.local/state".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/.local/share".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
+    # "/home/s/.local/state".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
   };
 
   systemd.services.systemd-machine-id-commit = {
