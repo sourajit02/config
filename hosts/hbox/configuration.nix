@@ -104,7 +104,6 @@
       directories = [
         # "/tmp" # manage ram ballooning
         "/var/log"
-        "/persist"
 
         "/etc/secureboot"
         "/var/lib/bluetooth"
@@ -118,6 +117,10 @@
 
         {
           directory = "/var/lib/nixos";
+          inInitrd = true;
+        }
+        {
+          directory = "/persist";
           inInitrd = true;
         }
 
