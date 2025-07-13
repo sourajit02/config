@@ -100,7 +100,7 @@
       # ];
 
       directories = [
-        "/tmp" # manage ram ballooning
+        # "/tmp" # manage ram ballooning
         "/var/log"
 
         "/etc/secureboot"
