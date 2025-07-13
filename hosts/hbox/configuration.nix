@@ -168,15 +168,15 @@
           }
         ];
         files = [
-          {
-            file = ".config/nushell/history.sqlite3";
-            mode = "0777";
-            configureParent = true;
-            parent.user = "s";
-            parent.group = "s";
-            parent.mode = "0777";
+          # {
+          #   file = ".config/nushell/history.sqlite3";
+          #   mode = "0777";
+          #   configureParent = true;
+          #   parent.user = "s";
+          #   parent.group = "s";
+          #   parent.mode = "0777";
 
-          }
+          # }
         ];
       };
     };
