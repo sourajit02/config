@@ -95,11 +95,10 @@
     enable = true;
     preserveAt."/persist" = {
 
-      commonMountOptions = [
-        "noatime"
-        "compress=zstd"
-        "nei"
-      ];
+      # commonMountOptions = [
+      #   "noatime"
+      #   "compress=zstd"
+      # ];
 
       directories = [
         # "/tmp" # manage ram ballooning
