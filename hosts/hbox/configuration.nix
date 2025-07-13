@@ -13,26 +13,23 @@
     ./disks.nix
   ];
 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   system.stateVersion = "25.11"; # never change this
   users.users.root.initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
   boot.loader.timeout = 2;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # Limit the number of generations to keep
   boot.loader.systemd-boot.configurationLimit = 10;
-  # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 1w";
   };
-  # Optimize storage
-  # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
   nix.settings.auto-optimise-store = true;
-
-  # nix.nixPath = [ "/users/s/config/nixcfg" ];
   nix.nixPath = [ "/home/s/nixcfg" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
@@ -54,12 +51,6 @@
   # system.copySystemConfiguration = true; # cannot be used with nixos-anywhere
   services.openssh.enable = true;
   programs.firefox.enable = true;
-
-  # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
     curl
@@ -73,7 +64,6 @@
 
   zramSwap = {
     enable = true;
-    # memoryPercent = 60;
   };
   services.swapspace = {
     enable = true;
@@ -81,9 +71,7 @@
   };
 
   programs.niri.enable = true;
-  # programs.nushell.enable = true;
-  hardware.graphics.enable = true; # vm issues?
-  # Set the default editor to vim
+  hardware.graphics.enable = true;
   environment.variables.EDITOR = "helix";
 
   users.mutableUsers = false;
