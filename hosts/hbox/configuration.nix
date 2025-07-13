@@ -167,8 +167,8 @@
           {
             file = ".config/nushell/history.sqlite3";
             how = "symlink";
-            user = "s";
-            group = "users";
+            # user = "s";
+            # group = "users";
           }
 
         ];
