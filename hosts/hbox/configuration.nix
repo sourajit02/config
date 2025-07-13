@@ -95,9 +95,9 @@
     enable = true;
     preserveAt."/persist" = {
 
-      commonMountOptions = [
-        "noatime"
-      ];
+      # commonMountOptions = [
+      #   "noatime"
+      # ];
 
       directories = [
         "/tmp" # manage ram ballooning
