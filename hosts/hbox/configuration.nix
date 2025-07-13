@@ -149,7 +149,8 @@
         directories = [
           "nixcfg"
           "downloads"
-          ".local/state"
+          # ".local/state"
+          # no need? .Trash-1000 being created per directory anyway
           # {
           #   directory = ".local/share/Trash";
           #   mountOptions = [ "x-gvfs-trash" ];
@@ -182,14 +183,14 @@
       user = "s";
       group = "users";
     };
-    "/home/s/.local/share".d = {
-      user = "s";
-      group = "users";
-    };
-    "/home/s/.local/state".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/.local/share".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
+    # "/home/s/.local/state".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
   };
 
   systemd.services.systemd-machine-id-commit = {
