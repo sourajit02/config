@@ -150,16 +150,17 @@
         directories = [
           # mounting issues, don't persist for now
           # https://github.com/nix-community/impermanence/pull/243
-          # {
-          # directory = ".local/share/";
-          # mountOptions = [ "x-gvfs-trash" ];
-          # how = "symlink";
-          # mode = "0777";
-          # configureParent = true;
-          # parent.user = "s";
-          # parent.group = "users";
-          # parent.mode = "0777";
-          # }
+          {
+            directory = ".local/share/";
+            mountOptions = [ "x-gvfs-trash" ];
+            how = "symlink";
+            user = "s";
+            group = "users";
+            # configureParent = true;
+            # parent.user = "s";
+            # parent.group = "users";
+            # parent.mode = "0777";
+          }
           "nixcfg"
           "downloads"
           ".local/state"
@@ -170,23 +171,19 @@
           }
         ];
         files = [
-          # {
-          #   file = ".config/nushell/history.sqlite3";
-          #   mode = "0777";
-          #   configureParent = true;
-          #   parent.user = "s";
-          #   parent.group = "s";
-          #   parent.mode = "0777";
-
-          # }
         ];
       };
     };
 
   };
 
+  # add directories here to set permissions correctly
   systemd.tmpfiles.settings.preservation = {
     "/home/s/.config".d = {
+      user = "s";
+      group = "users";
+    };
+    "/home/s/.local".d = {
       user = "s";
       group = "users";
     };
