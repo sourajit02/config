@@ -13,6 +13,12 @@
     trash-cli
     qutebrowser
   ];
+
+  home.sessionVariables = {
+    XKB_DEFAULT_LAYOUT = "us";
+    XKB_DEFAULT_VARIANT = "colemak";
+  };
+
   programs.qutebrowser = {
     enable = true;
   };
@@ -77,25 +83,25 @@
   programs.niri = {
     enable = true;
 
-    settings = ''
-      input {
-        keyboard {
-          xkb {
-            layout "us"
-            variant "colemak"
-            // options "compose:ralt,ctrl:nocaps"
-          }
-        }
-      }
+    # settings = ''
+    #   input {
+    #     keyboard {
+    #       xkb {
+    #         layout "us"
+    #         variant "colemak"
+    #         // options "compose:ralt,ctrl:nocaps"
+    #       }
+    #     }
+    #   }
 
-      // Add other niri configuration here
-      layout {
-        gaps 2
-        center-focused-column "never"
-      }
+    #   // Add other niri configuration here
+    #   layout {
+    #     gaps 2
+    #     center-focused-column "never"
+    #   }
 
-      spawn-at-startup "waybar"
-    '';
+    #   spawn-at-startup "waybar"
+    # '';
 
   };
 
