@@ -97,6 +97,8 @@
 
       commonMountOptions = [
         "noatime"
+        "compress=zstd"
+        "nei"
       ];
 
       directories = [
