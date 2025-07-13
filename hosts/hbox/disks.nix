@@ -58,6 +58,13 @@
                 #     "noatime"
                 #   ];
                 # };
+                # "/home" = {
+                #   mountpoint = "/home";
+                #   mountOptions = [
+                #     "subvol=home"
+                #     "noatime"
+                #   ];
+                # };
                 "/nix" = {
                   mountpoint = "/nix";
                   mountOptions = [
@@ -74,21 +81,14 @@
                     "noatime"
                   ];
                 };
-                # "/log" = {
-                #   mountpoint = "/var/log";
-                #   mountOptions = [
-                #     "subvol=log"
-                #     "compress=zstd"
-                #     "noatime"
-                #   ];
-                # };
-                # "/home" = {
-                #   mountpoint = "/home";
-                #   mountOptions = [
-                #     "subvol=home"
-                #     "noatime"
-                #   ];
-                # };
+                "/log" = {
+                  mountpoint = "/var/log";
+                  mountOptions = [
+                    "subvol=log"
+                    "compress=zstd"
+                    "noatime"
+                  ];
+                };
               };
             };
           };
@@ -96,6 +96,6 @@
       };
     };
   };
-  # fileSystems."/persist".neededForBoot = true;
-  # fileSystems."/var/log".neededForBoot = true;
+  fileSystems."/persist".neededForBoot = true;
+  fileSystems."/var/log".neededForBoot = true;
 }

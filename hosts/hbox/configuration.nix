@@ -111,9 +111,6 @@
       # ];
 
       directories = [
-        # "/tmp" # manage ram ballooning
-        "/var/log"
-
         "/etc/secureboot"
         "/var/lib/bluetooth"
         "/var/lib/fprint"
