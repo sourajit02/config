@@ -17,6 +17,7 @@
   users.users.root.initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
+  boot.loader.timeout = 2;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Limit the number of generations to keep
@@ -184,7 +185,7 @@
   };
 
   systemd.tmpfiles.settings.preservation = {
-    "%h/.config".d = {
+    "/home/s/.config".d = {
       user = "s";
       group = "users";
       mode = "0777";
