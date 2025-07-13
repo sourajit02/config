@@ -77,7 +77,7 @@
   };
   services.swapspace = {
     enable = true;
-    settings.max_swapsize = "128g"
+    settings.max_swapsize = "128g";
   };
 
   programs.niri.enable = true;
