@@ -181,6 +181,10 @@
       user = "s";
       group = "users";
     };
+    "/home/s/.config/nushell".d = {
+      user = "s";
+      group = "users";
+    };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
