@@ -163,6 +163,7 @@
           "nixcfg"
           "downloads"
           ".local/state"
+          ".config"
           {
             directory = ".ssh";
             mode = "0700";
