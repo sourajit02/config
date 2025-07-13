@@ -121,7 +121,6 @@
         "/var/lib/systemd/coredump"
         "/var/lib/systemd/rfkill"
         "/var/lib/systemd/timers"
-
         {
           directory = "/var/lib/nixos";
           inInitrd = true;
