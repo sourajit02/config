@@ -149,7 +149,7 @@
         directories = [
           {
             directory = ".local/share/Trash";
-            # mountOptions = [ "x-gvfs-trash" ];
+            mountOptions = [ "x-gvfs-trash" ];
             how = "symlink";
             user = "s";
             group = "users";
@@ -163,11 +163,10 @@
           }
         ];
         files = [
-          ".config/nushell/history.sqlite3"
-          # {
-          #   file = ".config/nushell/history.sqlite3";
-          #   how = "symlink";
-          # }
+          {
+            file = ".config/nushell/history.sqlite3";
+            how = "symlink";
+          }
 
         ];
       };
@@ -178,10 +177,6 @@
   # add directories here to set permissions correctly
   systemd.tmpfiles.settings.preservation = {
     "/home/s/.config".d = {
-      user = "s";
-      group = "users";
-    };
-    "/home/s/.config/nushell".d = {
       user = "s";
       group = "users";
     };
