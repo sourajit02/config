@@ -7,12 +7,11 @@
 }:
 
 {
-  # imports = [
-  #   inputs.niri.homeModules.niri
-  # ];
+  imports = [
+    inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration
+  ];
 
   home.packages = with pkgs; [
-    niri
     waybar
     fuzzel
     mako
