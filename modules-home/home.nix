@@ -12,7 +12,7 @@
   ];
 
   home.packages = with pkgs; [
-    niri
+    # niri
     waybar
     fuzzel
     mako
