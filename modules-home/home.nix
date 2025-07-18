@@ -11,6 +11,9 @@
     inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration
   ];
 
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  programs.niri.package = pkgs.niri-unstable;
+
   home.packages = with pkgs; [
     waybar
     fuzzel
@@ -113,11 +116,11 @@
       };
     };
 
-    binds = {
-      "Mod+Shift+q" = "quit";
-      "Mod+t" = "spawn alacritty";
-      "Mod+d" = "spawn fuzzel";
-    };
+    # binds = {
+    #   "Mod+Shift+q" = "quit";
+    #   "Mod+t" = "spawn alacritty";
+    #   "Mod+d" = "spawn fuzzel";
+    # };
 
     # settings = ''
     #   input {
