@@ -113,6 +113,12 @@
       };
     };
 
+    binds = with config.lib.niri.actions; {
+      "Mod+Shift+e".action = quit;
+      "Mod+t".action = spawn "alacritty";
+      "Mod+d".action = spawn "fuzzel";
+    };
+
     # settings = ''
     #   input {
     #     keyboard {
