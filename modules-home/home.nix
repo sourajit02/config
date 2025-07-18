@@ -100,18 +100,18 @@
 
   programs.niri = {
     enable = true;
-    # settings = {
-    #   environment."NIXOS_OZONE_WL" = "1";
-    #   input = {
-    #     keyboard = {
-    #       xkb = {
-    #         layout = "us";
-    #         variant = "colemak";
-    #         options = "compose:ralt,ctrl:nocaps";
-    #       };
-    #     };
-    #   };
-    # };
+    settings = {
+      environment."NIXOS_OZONE_WL" = "1";
+      input = {
+        keyboard = {
+          xkb = {
+            layout = "us";
+            variant = "colemak";
+            # options = "compose:ralt,ctrl:nocaps";
+          };
+        };
+      };
+    };
 
     # settings = ''
     #   input {
