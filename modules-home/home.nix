@@ -7,12 +7,12 @@
 }:
 
 {
-  imports = [
-    inputs.niri.homeModules.niri
-  ];
+  # imports = [
+  #   inputs.niri.homeModules.niri
+  # ];
 
   home.packages = with pkgs; [
-    # niri
+    niri
     waybar
     fuzzel
     mako
