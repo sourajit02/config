@@ -38,7 +38,8 @@
           disko.nixosModules.disko
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
-          niri.nixosModules.niri
+          home-manager.nixosModules.home-manager
+          # niri.nixosModules.niri
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true; # install packages to /etc/profiles
