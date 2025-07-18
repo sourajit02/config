@@ -7,6 +7,10 @@
 }:
 
 {
+  imports = [
+    inputs.niri.homeManagerModules.niri
+  ];
+
   home.packages = with pkgs; [
     niri
     waybar

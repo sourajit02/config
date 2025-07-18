@@ -39,15 +39,13 @@
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
           niri.nixosModules.niri
-          niri.homeManagerModules.niri
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true; # install packages to /etc/profiles
             home-manager.backupFileExtension = "backup";
             home-manager.users.s = ./modules-home/home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
 
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
           }
         ];
       };
