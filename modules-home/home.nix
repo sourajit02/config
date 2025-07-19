@@ -19,6 +19,7 @@
     mako
     trash-cli
     qutebrowser
+    krita
   ];
 
   home.sessionVariables = {
@@ -88,17 +89,17 @@
     };
   };
 
+  programs.krita.enable = true;
   # wayland compositor settings
   programs.waybar.settings.mainBar.layer = "top";
   programs.waybar.systemd.enable = true;
   programs.niri = {
     enable = true;
     settings = {
-
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
       layout = {
-        gaps = 0;
+        gaps = 2;
         border.width = 4;
       };
       input = {
