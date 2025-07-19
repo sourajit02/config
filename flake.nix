@@ -17,8 +17,8 @@
     niri.url = "github:sodiboo/niri-flake";
     niri.inputs.nixpkgs.follows = "nixpkgs";
 
-    stylix.url = "github:danth/stylix";
-    stylix.inputs.nixpkgs.follows = "nixpkgs";
+    # stylix.url = "github:danth/stylix";
+    # stylix.inputs.nixpkgs.follows = "nixpkgs";
 
   };
   outputs =
@@ -26,7 +26,7 @@
       self,
       nixpkgs,
       niri,
-      stylix,
+      # stylix,
       ...
     }@inputs:
     {
@@ -39,7 +39,7 @@
           disko.nixosModules.disko
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
-          stylix.nixosModules.stylix
+          # stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
