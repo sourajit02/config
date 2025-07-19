@@ -197,7 +197,7 @@
       "/persistent/etc/machine-id"
     ];
     serviceConfig.ExecStart = [
-      ""
+      # ""
       "systemd-machine-id-setup --commit --root /persistent"
     ];
   };
