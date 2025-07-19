@@ -8,8 +8,8 @@
 
 {
   imports = [
-    inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration
-    # inputs.stylix.nixosModules.stylix
+    inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration, so use flake
+    inputs.stylix.nixosModules.stylix
   ];
 
   home.packages = with pkgs; [
@@ -30,7 +30,7 @@
     QT_QPA_PLATFORM = "wayland;xcb";
   };
 
-  stylix.targets.cursor = null;
+  # stylix.targets.cursor = null;
 
   programs.qutebrowser = {
     enable = true;
