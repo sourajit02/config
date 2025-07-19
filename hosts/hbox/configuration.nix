@@ -138,7 +138,12 @@
           "x-gvfs-hide"
         ];
         directories = [
-          "config"
+          # "config"
+          {
+            directory = ".ssh";
+            how = "symlink";
+            # mode = "0755";
+          }
           "apps"
           "courses"
           "downloads"
@@ -177,10 +182,10 @@
       user = "s";
       group = "users";
     };
-    "/home/s/config".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/config".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
