@@ -102,7 +102,6 @@
         border.width = 4;
       };
       input = {
-        mod-key = "Control_L";
         keyboard = {
           xkb = {
             layout = "us";
