@@ -95,24 +95,24 @@
 
   programs.niri = {
     enable = true;
-    # settings = {
-    #   environment."NIXOS_OZONE_WL" = "1";
-    #   input = {
-    #     keyboard = {
-    #       xkb = {
-    #         layout = "us";
-    #         variant = "colemak";
-    #         # options = "compose:ralt,ctrl:nocaps";
-    #       };
-    #     };
-    #   };
+    settings = {
+      environment."NIXOS_OZONE_WL" = "1";
+      input = {
+        keyboard = {
+          xkb = {
+            layout = "us";
+            variant = "colemak";
+            # options = "compose:ralt,ctrl:nocaps";
+          };
+        };
+      };
 
-    #   binds = with config.lib.niri.actions; {
-    #     "Mod+T".action = spawn "alacritty";
-    #     "Mod+O".action = show-hotkey-overlay;
-    #     "Mod+D".action = spawn "fuzzel";
-    #   };
-    # };
+      binds = with config.lib.niri.actions; {
+        "Mod+T".action = spawn "alacritty";
+        "Mod+O".action = show-hotkey-overlay;
+        "Mod+D".action = spawn "fuzzel";
+      };
+    };
   };
 
   ## do not touch
