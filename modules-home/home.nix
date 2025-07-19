@@ -38,11 +38,11 @@
     enable = true;
     extraConfig = ''
       def nrs [] {
-            cd /home/s/nixcfg
+            cd /home/s/config
             git pull
-            # rm -rf nixcfg
-            # git clone https://github.com/sourajit02/nixcfg
-            # cd nixcfg
+            # rm -rf config
+            # git clone https://github.com/sourajit02/config
+            # cd config
             sudo nixos-rebuild switch --flake
             reboot
           }

@@ -30,7 +30,7 @@
     options = "--delete-older-than 1w";
   };
   nix.settings.auto-optimise-store = true;
-  nix.nixPath = [ "/home/s/nixcfg" ];
+  nix.nixPath = [ "/home/s/config" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
@@ -138,7 +138,7 @@
           "x-gvfs-hide"
         ];
         directories = [
-          "nixcfg"
+          "config"
           "apps"
           "courses"
           "downloads"
