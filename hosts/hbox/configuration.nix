@@ -138,11 +138,7 @@
           "x-gvfs-hide"
         ];
         directories = [
-          # "config"
-          {
-            directory = "config";
-            inInitrd = true;
-          }
+          "config"
           "apps"
           "courses"
           "downloads"
