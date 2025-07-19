@@ -89,7 +89,7 @@
     };
   };
 
-  programs.krita.enable = true;
+  # programs.krita.enable = true;
   # wayland compositor settings
   programs.waybar.settings.mainBar.layer = "top";
   programs.waybar.systemd.enable = true;
