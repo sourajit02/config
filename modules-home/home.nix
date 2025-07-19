@@ -101,7 +101,7 @@
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
       layout = {
-        gaps = 10;
+        gaps = 4;
         border.width = 4;
       };
       input = {
