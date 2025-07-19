@@ -18,7 +18,7 @@
   home.packages = with pkgs; [
     waybar
     fuzzel
-    rofi
+    # rofi
     ghostty
     mako
     trash-cli
@@ -112,8 +112,8 @@
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn "ghostty";
         "Mod+slash".action = show-hotkey-overlay;
-        # "Mod+D".action = spawn "fuzzel";
-        "Mod+D".action = spawn "rofi";
+        "Mod+D".action = spawn "fuzzel";
+        # "Mod+D".action = spawn "rofi";
       };
     };
   };
