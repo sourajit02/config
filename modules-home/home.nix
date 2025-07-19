@@ -95,7 +95,6 @@
     enable = true;
     settings = {
 
-      mod-key = "Control_L";
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
       layout = {
@@ -103,6 +102,7 @@
         border.width = 4;
       };
       input = {
+        mod-key = "Control_L";
         keyboard = {
           xkb = {
             layout = "us";
