@@ -93,7 +93,7 @@
   programs.waybar.settings.mainBar.layer = "top";
   programs.waybar.systemd.enable = true;
   programs.niri = {
-    package = pkgs.niri-unstable;
+    # package = pkgs.niri-unstable;
     enable = true;
     settings = {
       environment."NIXOS_OZONE_WL" = "1";
