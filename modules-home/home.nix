@@ -69,7 +69,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "autumn_night_transparent";
+      # theme = "autumn_night_transparent"; # stylix will take care of this
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
