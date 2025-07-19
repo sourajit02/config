@@ -142,7 +142,7 @@
           {
             directory = "config";
             how = "symlink";
-            # mode = "0755";
+            mode = "0755";
           }
           "apps"
           "courses"
@@ -182,10 +182,10 @@
       user = "s";
       group = "users";
     };
-    # "/home/s/config".d = {
-    #   user = "s";
-    #   group = "users";
-    # };
+    "/home/s/config".d = {
+      user = "s";
+      group = "users";
+    };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
