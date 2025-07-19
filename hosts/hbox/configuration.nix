@@ -195,4 +195,6 @@
       "systemd-machine-id-setup --commit --root /persistent"
     ];
   };
+
+  stylix.autoEnable = true;
 }
