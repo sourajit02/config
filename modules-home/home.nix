@@ -13,7 +13,6 @@
   ];
 
   home.packages = with pkgs; [
-    stylix
     waybar
     fuzzel
     # rofi
@@ -30,8 +29,6 @@
     XKB_DEFAULT_VARIANT = "colemak";
     QT_QPA_PLATFORM = "wayland;xcb";
   };
-
-  # stylix.targets.cursor = null;
 
   programs.qutebrowser = {
     enable = true;
