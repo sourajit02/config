@@ -29,6 +29,8 @@
     QT_QPA_PLATFORM = "wayland;xcb";
   };
 
+  programs.stylix.autoEnable = true;
+
   programs.qutebrowser = {
     enable = true;
   };

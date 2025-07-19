@@ -26,6 +26,7 @@
       self,
       nixpkgs,
       niri,
+      stylix,
       ...
     }@inputs:
     {
@@ -38,6 +39,7 @@
           disko.nixosModules.disko
           # inputs.impermanence.nixosModules.impermanence
           preservation.nixosModules.preservation
+          sytlix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
