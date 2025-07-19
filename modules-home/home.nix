@@ -111,9 +111,9 @@
 
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn "ghostty";
-        "Mod+/".action = show-hotkey-overlay;
+        "Mod+slash".action = show-hotkey-overlay;
         # "Mod+D".action = spawn "fuzzel";
-        "Mod+slash".action = spawn "rofi";
+        "Mod+D".action = spawn "rofi";
       };
     };
   };
