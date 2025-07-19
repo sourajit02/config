@@ -25,9 +25,6 @@
     qutebrowser
   ];
 
-  programs.waybar.settings.mainBar.layer = "top";
-  programs.waybar.systemd.enable = true;
-
   home.sessionVariables = {
     XKB_DEFAULT_LAYOUT = "us";
     XKB_DEFAULT_VARIANT = "colemak";
@@ -95,6 +92,9 @@
     };
   };
 
+  # wayland compositor settings
+  programs.waybar.settings.mainBar.layer = "top";
+  programs.waybar.systemd.enable = true;
   programs.niri = {
     enable = true;
     settings = {
@@ -110,10 +110,10 @@
       };
 
       binds = with config.lib.niri.actions; {
-        "Mod+Enter".action = spawn "ghostty";
+        "Mod+Return".action = spawn "ghostty";
         "Mod+/".action = show-hotkey-overlay;
         # "Mod+D".action = spawn "fuzzel";
-        "Mod+D".action = spawn "rofi";
+        "Mod+slash".action = spawn "rofi";
       };
     };
   };
