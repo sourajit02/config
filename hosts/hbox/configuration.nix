@@ -138,7 +138,11 @@
           "x-gvfs-hide"
         ];
         directories = [
-          "config"
+          # "config"
+          {
+            directory = "config";
+            initrd = true;
+          }
           "apps"
           "courses"
           "downloads"
@@ -177,10 +181,10 @@
       user = "s";
       group = "users";
     };
-    "/home/s/config".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/config".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
