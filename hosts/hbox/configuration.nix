@@ -141,7 +141,7 @@
           # "config"
           {
             directory = "config";
-            initrd = true;
+            inInitrd = true;
           }
           "apps"
           "courses"
