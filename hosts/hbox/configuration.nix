@@ -30,7 +30,7 @@
     options = "--delete-older-than 1w";
   };
   nix.settings.auto-optimise-store = true;
-  nix.nixPath = [ "/home/s/config" ];
+  # nix.nixPath = [ "/home/s/config" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
@@ -65,7 +65,7 @@
   };
   services.swapspace = {
     enable = true;
-    settings.max_swapsize = "128g";
+    settings.max_swapsize = "64g";
   };
 
   hardware.graphics.enable = true;
@@ -90,12 +90,6 @@
   preservation = {
     enable = true;
     preserveAt."/persist" = {
-
-      # commonMountOptions = [
-      #   "noatime"
-      #   "compress=zstd"
-      # ];
-
       directories = [
         "/etc/secureboot"
         "/var/lib/bluetooth"
@@ -177,10 +171,10 @@
       user = "s";
       group = "users";
     };
-    # "/home/s/config".d = {
-    #   user = "s";
-    #   group = "users";
-    # };
+    "/home/s/".d = {
+      user = "s";
+      group = "users";
+    };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
