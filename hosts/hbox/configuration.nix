@@ -196,5 +196,5 @@
     ];
   };
 
-  stylix.autoEnable = true;
+  stylix.enable = true;
 }
