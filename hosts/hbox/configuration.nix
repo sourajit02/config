@@ -140,7 +140,15 @@
         ];
         directories = [
           "nixcfg"
+          "apps"
+          "courses"
           "downloads"
+          # no media, is mounted on separate drive so won't be wiped anyway
+          "photos"
+          "projects"
+          "sitar"
+          "texts"
+          "work"
           # no need? .Trash-1000 being created per directory anyway
           # {
           #   directory = ".local/share/Trash";

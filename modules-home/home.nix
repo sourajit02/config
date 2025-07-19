@@ -93,63 +93,26 @@
     };
   };
 
-  # modules = [
-  #   niri.homeModules.config
-  #   {
-  #     programs.niri.settings = {
-  #       outputs."eDP-1".scale = 2.0;
-  #     };
-  #   }
-  # ];
-
   programs.niri = {
     enable = true;
-    settings = {
-      environment."NIXOS_OZONE_WL" = "1";
-      input = {
-        keyboard = {
-          xkb = {
-            layout = "us";
-            variant = "colemak";
-            # options = "compose:ralt,ctrl:nocaps";
-          };
-        };
-      };
+    # settings = {
+    #   environment."NIXOS_OZONE_WL" = "1";
+    #   input = {
+    #     keyboard = {
+    #       xkb = {
+    #         layout = "us";
+    #         variant = "colemak";
+    #         # options = "compose:ralt,ctrl:nocaps";
+    #       };
+    #     };
+    #   };
 
-      binds = with config.lib.niri.actions; {
-        "Mod+T".action = spawn "alacritty";
-        "Mod+O".action = show-hotkey-overlay;
-        "Mod+D".action = spawn "fuzzel";
-      };
-
-    };
-
-    # binds = {
-    #   "Mod+Shift+q" = "quit";
-    #   "Mod+t" = "spawn alacritty";
-    #   "Mod+d" = "spawn fuzzel";
+    #   binds = with config.lib.niri.actions; {
+    #     "Mod+T".action = spawn "alacritty";
+    #     "Mod+O".action = show-hotkey-overlay;
+    #     "Mod+D".action = spawn "fuzzel";
+    #   };
     # };
-
-    # settings = ''
-    #   input {
-    #     keyboard {
-    #       xkb {
-    #         layout "us"
-    #         variant "colemak"
-    #         // options "compose:ralt,ctrl:nocaps"
-    #       }
-    #     }
-    #   }
-
-    #   // Add other niri configuration here
-    #   layout {
-    #     gaps 2
-    #     center-focused-column "never"
-    #   }
-
-    #   spawn-at-startup "waybar"
-    # '';
-
   };
 
   ## do not touch
