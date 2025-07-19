@@ -171,10 +171,10 @@
       user = "s";
       group = "users";
     };
-    "/home/s/".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
     "/home/s/.local".d = {
       user = "s";
       group = "users";
