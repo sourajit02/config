@@ -94,7 +94,14 @@
   programs.niri = {
     enable = true;
     settings = {
+
+      mod-key = "Control_L";
+      prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
+      layout = {
+        gaps = 0;
+        border.width = 4;
+      };
       input = {
         keyboard = {
           xkb = {
