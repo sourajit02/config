@@ -9,7 +9,7 @@
 {
   imports = [
     inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration
-    inputs.stylix.nixosModules.stylix
+    # inputs.stylix.nixosModules.stylix
   ];
 
   home.packages = with pkgs; [
