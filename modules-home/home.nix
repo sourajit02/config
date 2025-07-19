@@ -19,6 +19,7 @@
     mako
     trash-cli
     qutebrowser
+    xwayland-satellite
     krita
   ];
 
