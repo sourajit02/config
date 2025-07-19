@@ -18,6 +18,8 @@
   home.packages = with pkgs; [
     waybar
     fuzzel
+    rofi
+    ghostty
     mako
     trash-cli
     qutebrowser
@@ -64,7 +66,7 @@
   programs.yazi = {
     enable = true;
   };
-  programs.alacritty = {
+  programs.ghostty = {
     enable = true;
   };
 
@@ -108,9 +110,10 @@
       };
 
       binds = with config.lib.niri.actions; {
-        "Mod+T".action = spawn "alacritty";
-        "Mod+O".action = show-hotkey-overlay;
-        "Mod+D".action = spawn "fuzzel";
+        "Mod+Enter".action = spawn "ghostty";
+        "Mod+/".action = show-hotkey-overlay;
+        # "Mod+D".action = spawn "fuzzel";
+        "Mod+D".action = spawn "rofi";
       };
     };
   };

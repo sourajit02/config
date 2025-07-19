@@ -57,7 +57,6 @@
     wget
     helix
     yazi
-    alacritty
     nushell
   ];
 
