@@ -140,7 +140,7 @@
         directories = [
           # "config"
           {
-            directory = ".ssh";
+            directory = "config";
             how = "symlink";
             # mode = "0755";
           }
