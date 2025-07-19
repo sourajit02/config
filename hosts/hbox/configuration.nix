@@ -138,12 +138,7 @@
           "x-gvfs-hide"
         ];
         directories = [
-          # "config"
-          {
-            directory = "config";
-            how = "symlink";
-            mode = "0755";
-          }
+          "config"
           "apps"
           "courses"
           "downloads"
