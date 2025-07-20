@@ -198,7 +198,9 @@
     ];
   };
   stylix.enable = true;
+  # autogenerates colorscheme from bg if not present
   # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  stylix.polarity = "dark";
   stylix.image = pkgs.fetchurl {
     url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
     hash = "sha256-G4L4vFOTeXFXeoV5/6r0PYHyIlGdYNxvYubLO1GCkbM=";
