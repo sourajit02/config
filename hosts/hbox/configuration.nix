@@ -205,7 +205,7 @@
     enable = true;
 
     # disable after nixos-anywhere install, trusted signature lacking error for autogeneration pallete code
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
     polarity = "dark"; # bias
     image = pkgs.fetchurl {
