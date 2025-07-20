@@ -23,12 +23,15 @@
     swaybg
     blender
     libqalculate
-    zed
+    zed-editor
   ];
 
   programs.home-manager.enable = true;
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.zed-editor = {
     enable = true;
   };
   programs.ghostty = {
