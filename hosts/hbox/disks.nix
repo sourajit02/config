@@ -89,6 +89,14 @@
                     "noatime"
                   ];
                 };
+                "/swapspace" = {
+                  mountpoint = "/swapspace";
+                  mountOptions = [
+                    "subvol=swapspace"
+                    "compress=zstd"
+                    "noatime"
+                  ];
+                };
               };
             };
           };

@@ -65,7 +65,10 @@
   };
   services.swapspace = {
     enable = true;
-    settings.max_swapsize = "64g";
+    settings = {
+      max_swapsize = "64g";
+      swappath = "/swapspace";
+    };
   };
 
   hardware.graphics.enable = true;
