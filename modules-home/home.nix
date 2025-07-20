@@ -30,11 +30,6 @@
   programs.fuzzel = {
     enable = true;
   };
-  programs.waybar = {
-    enable = true;
-    systemd.enable = true;
-    settings.mainBar.layer = "top";
-  };
   programs.yazi = {
     enable = true;
   };
@@ -55,6 +50,11 @@
   };
   programs.blender = {
     enable = true;
+  };
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+    settings.mainBar.layer = "top";
   };
 
   programs.nushell = {
