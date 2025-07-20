@@ -9,6 +9,7 @@
 {
   imports = [
     inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration, so use flake
+    inputs.zen-browser.homeModules.beta
   ];
 
   home.packages = with pkgs; [
@@ -25,7 +26,6 @@
     libqalculate
     zed-editor
     zellij
-    librewolf
   ];
 
   programs.home-manager.enable = true;
@@ -33,7 +33,7 @@
   programs.yazi = {
     enable = true;
   };
-  programs.librewolf = {
+  programs.zen-browser = {
     enable = true;
   };
   programs.zellij = {
