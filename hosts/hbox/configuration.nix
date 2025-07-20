@@ -237,13 +237,13 @@
       };
 
       sansSerif = {
-        package = pkgs.iosevka;
-        name = "Iosevka Term Custom";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
       };
 
       monospace = {
-        package = pkgs.iosevka;
-        name = "Iosevka Term Custom";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans Mono";
       };
 
       emoji = {
