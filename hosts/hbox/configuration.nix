@@ -203,7 +203,10 @@
   };
   stylix = {
     enable = true;
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+
+    # disable after nixos-anywhere install, trusted signature lacking error for autogeneration pallete code
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+
     polarity = "dark"; # bias
     image = pkgs.fetchurl {
       url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
