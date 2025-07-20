@@ -40,6 +40,14 @@
   };
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
+    settings.mainBar.layer = "top";
+  };
+  programs.yazi = {
+    enable = true;
+  };
+  programs.ghostty = {
+    enable = true;
   };
 
   programs.nushell = {
@@ -66,13 +74,6 @@
       history.file_format = "sqlite";
       history.isolation = false;
     };
-  };
-
-  programs.yazi = {
-    enable = true;
-  };
-  programs.ghostty = {
-    enable = true;
   };
 
   programs.helix = {
@@ -102,8 +103,6 @@
 
   # programs.krita.enable = true;
   # wayland compositor settings
-  programs.waybar.settings.mainBar.layer = "top";
-  programs.waybar.systemd.enable = true;
   programs.niri = {
     enable = true;
     settings = {
