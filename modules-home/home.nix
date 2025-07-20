@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  stylix,
   ...
 }:
 
@@ -100,6 +101,17 @@
   programs.niri = {
     enable = true;
     settings = {
+      spawn-at-startup = [
+        { command = [ "waybar" ]; }
+        {
+          command = [
+            "swaybg"
+            "--image"
+            "${stylix.image}"
+          ];
+        }
+        { command = [ "~/.config/niri/scripts/startup.sh" ]; }
+      ];
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
       layout = {
