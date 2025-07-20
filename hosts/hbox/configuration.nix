@@ -208,9 +208,13 @@
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
     polarity = "dark"; # bias
+    # image = pkgs.fetchurl {
+    #   url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
+    #   hash = "sha256-G4L4vFOTeXFXeoV5/6r0PYHyIlGdYNxvYubLO1GCkbM=";
+    # };
     image = pkgs.fetchurl {
-      url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
-      hash = "sha256-G4L4vFOTeXFXeoV5/6r0PYHyIlGdYNxvYubLO1GCkbM=";
+      url = "https://4kwallpapers.com/images/wallpapers/cha-hae-in-5k-solo-5120x2880-21907.jpg";
+      hash = "sha256-LR3RV1yVS/YaNGdM5dB7klvJ3BYDEGOMgQSMLIu52eU=";
     };
     fonts = {
       serif = {
