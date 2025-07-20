@@ -67,8 +67,8 @@
   };
   programs.waybar = {
     enable = true;
-    systemd.enable = false;
-    settings.mainBar.layer = "top";
+    # systemd.enable = true;
+    # settings.mainBar.layer = "top";
   };
   programs.nushell = {
     enable = true;
