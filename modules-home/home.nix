@@ -53,6 +53,9 @@
   programs.xwayland-satellite = {
     enable = true;
   };
+  programs.blender = {
+    enable = true;
+  };
 
   programs.nushell = {
     enable = true;
