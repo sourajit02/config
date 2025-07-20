@@ -35,9 +35,6 @@
   programs.ghostty = {
     enable = true;
   };
-  programs.trash-cli = {
-    enable = true;
-  };
   programs.qutebrowser = {
     enable = true;
   };
