@@ -76,9 +76,6 @@
       def nrs [] {
             cd /home/s/config
             git pull
-            # rm -rf config
-            # git clone https://github.com/sourajit02/config
-            # cd config
             sudo nixos-rebuild switch --flake
             reboot
           }
