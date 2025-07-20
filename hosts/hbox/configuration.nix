@@ -63,13 +63,13 @@
   zramSwap = {
     enable = true;
   };
-  services.swapspace = {
-    enable = true;
-    settings = {
-      max_swapsize = "64g";
-      swappath = "/swapspace";
-    };
-  };
+  # services.swapspace = {
+  #   enable = true;
+  #   settings = {
+  #     max_swapsize = "64g";
+  #     swappath = "/swapspace";
+  #   };
+  # };
 
   hardware.graphics.enable = true;
   environment.variables.EDITOR = "helix";
