@@ -104,13 +104,13 @@
     settings = {
       spawn-at-startup = [
         { command = [ "waybar" ]; }
-        {
-          command = [
-            "swaybg"
-            "--image"
-            "${config.stylix.image}"
-          ];
-        }
+        # {
+        #   command = [
+        #     "swaybg"
+        #     "--image"
+        #     "${config.stylix.image}"
+        #   ];
+        # }
         # { command = [ "~/.config/niri/scripts/startup.sh" ]; }
       ];
       hotkey-overlay = {
@@ -148,7 +148,6 @@
     XKB_DEFAULT_LAYOUT = "us";
     XKB_DEFAULT_VARIANT = "colemak";
     QT_QPA_PLATFORM = "wayland;xcb";
-    WAYBAR_DISABLE_PORTAL = "1";
   };
   ## do not touch
   home.stateVersion = "25.11";
