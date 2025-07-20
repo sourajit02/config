@@ -41,9 +41,6 @@
   programs.waybar = {
     enable = true;
   };
-  programs.swaybg = {
-    enable = true;
-  };
 
   programs.nushell = {
     enable = true;
@@ -112,13 +109,13 @@
     settings = {
       spawn-at-startup = [
         { command = [ "waybar" ]; }
-        # {
-        #   command = [
-        #     "swaybg"
-        #     "--image"
-        #     "${config.stylix.image}"
-        #   ];
-        # }
+        {
+          command = [
+            "swaybg"
+            "--image"
+            "${config.stylix.image}"
+          ];
+        }
         # { command = [ "~/.config/niri/scripts/startup.sh" ]; }
       ];
       prefer-no-csd = true;
