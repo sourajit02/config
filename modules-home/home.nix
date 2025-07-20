@@ -22,7 +22,7 @@
     krita
     swaybg
     blender
-    qalc
+    libqalculate
   ];
 
   programs.home-manager.enable = true;
@@ -30,7 +30,7 @@
   programs.yazi = {
     enable = true;
   };
-  programs.qalc = {
+  programs.libqalculate = {
     enable = true;
   };
   programs.ghostty = {
