@@ -89,6 +89,8 @@
                     "noatime"
                   ];
                 };
+                ## also have to worry about disabling cow and other stuff on btrfs
+                # using
                 # "/swapspace" = {
                 #   mountpoint = "/swapspace";
                 #   mountOptions = [
