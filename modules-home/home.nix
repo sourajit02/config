@@ -146,6 +146,7 @@
     XKB_DEFAULT_LAYOUT = "us";
     XKB_DEFAULT_VARIANT = "colemak";
     QT_QPA_PLATFORM = "wayland;xcb";
+    WAYBAR_DISABLE_PORTAL = "1";
   };
   ## do not touch
   home.stateVersion = "25.11";
