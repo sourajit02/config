@@ -23,6 +23,7 @@
     xwayland-satellite
     krita
     swaybg
+    blender
   ];
 
   home.sessionVariables = {
@@ -32,6 +33,9 @@
   };
 
   programs.qutebrowser = {
+    enable = true;
+  };
+  programs.blender = {
     enable = true;
   };
 
