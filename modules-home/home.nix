@@ -38,9 +38,6 @@
   programs.qutebrowser = {
     enable = true;
   };
-  programs.xwayland-satellite = {
-    enable = true;
-  };
   programs.waybar = {
     enable = true;
     systemd.enable = true;
