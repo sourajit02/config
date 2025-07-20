@@ -30,6 +30,9 @@
   programs.fuzzel = {
     enable = true;
     settings = {
+      main = {
+        horizontal-pad = 8;
+      };
       border = {
         width = 0;
         radius = 0;
