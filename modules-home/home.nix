@@ -27,6 +27,7 @@
     zed-editor
     zellij
     btop
+    iosevka
   ];
 
   programs.home-manager.enable = true;
