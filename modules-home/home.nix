@@ -3,7 +3,6 @@
   pkgs,
   lib,
   inputs,
-  stylix,
   ...
 }:
 
@@ -107,7 +106,7 @@
           command = [
             "swaybg"
             "--image"
-            "${stylix.image}"
+            # "${stylix.image}"
           ];
         }
         { command = [ "~/.config/niri/scripts/startup.sh" ]; }
