@@ -30,7 +30,7 @@
     options = "--delete-older-than 1w";
   };
   nix.settings.auto-optimise-store = true;
-  # nix.nixPath = [ "/home/s/config" ];
+  nix.nixPath = [ "/home/s/config" ];
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
