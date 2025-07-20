@@ -203,13 +203,35 @@
   };
 
   fonts.packages = with pkgs; [
+    #######
+    ### This is incomplete, just here to check build ability
     (iosevka.override {
       set = "term";
       privateBuildPlan = {
-        family = "Iosevka Term Custom";
-        spacing = "term"; # Good for terminals
+        family = "IosevkaMonoSans";
+        spacing = "term"; # "term" to make symbols like 🅇 actually fit in one space
         serifs = "sans";
-        # Your customizations here
+        noCvSs = true;
+        exportGlyphNames = true;
+        buildTextureFeature = true;
+        # dunno if this does anything
+        hintParams = [
+          "-a"
+          "qqq"
+        ];
+        metricOverride = {
+          xHeight = 548; # height of x, a etc
+          leading = 1100; # line height
+          dotSize = "blend(weight, [425, 140], [600, 170])"; # size of dots in diacritics 125 default
+          periodSize = "blend(weight, [425, 180], [600, 200])"; # size of period and comma, 140 default
+
+        };
+        # this is a width, set to 548 for better spacing between letters
+        widths.Normal = {
+          shape = 548;
+          menu = 5;
+          css = "normal";
+        };
       };
     })
 
@@ -238,12 +260,12 @@
 
       sansSerif = {
         package = pkgs.iosevka;
-        name = "Iosevka Term Custom";
+        name = "IosevkaMonoSans";
       };
 
       monospace = {
         package = pkgs.iosevka;
-        name = "Iosevka Term Custom";
+        name = "IosevkaMonoSans";
       };
 
       emoji = {
