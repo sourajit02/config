@@ -136,6 +136,7 @@
         "Mod+N".action = spawn "ghostty -e yazi";
         "Mod+slash".action = show-hotkey-overlay;
         "Mod+R".action = spawn "fuzzel";
+        "Mod+C".action = quit;
         # "Mod+D".action = spawn "rofi -show combi -modes combi -combi-modes \"drun,window\" -show-icons";
       };
     };
