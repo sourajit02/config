@@ -28,15 +28,6 @@
     zellij
     btop
     # iosevka
-    (iosevka.override {
-      set = "term";
-      privateBuildPlan = {
-        family = "Iosevka Term Custom";
-        spacing = "term"; # Good for terminals
-        serifs = "sans";
-        # Your customizations here
-      };
-    })
   ];
 
   programs.home-manager.enable = true;
