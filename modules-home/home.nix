@@ -26,12 +26,7 @@
     blender
   ];
 
-  home.sessionVariables = {
-    XKB_DEFAULT_LAYOUT = "us";
-    XKB_DEFAULT_VARIANT = "colemak";
-    QT_QPA_PLATFORM = "wayland;xcb";
-  };
-
+  programs.home-manager.enable = true;
   programs.qutebrowser = {
     enable = true;
   };
@@ -79,7 +74,6 @@
   programs.helix = {
     enable = true;
     settings = {
-      # theme = "autumn_night_transparent"; # stylix will take care of this
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -93,15 +87,8 @@
         formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
       }
     ];
-    themes = {
-      autumn_night_transparent = {
-        "inherits" = "autumn_night";
-        "ui.background" = { };
-      };
-    };
   };
 
-  # programs.krita.enable = true;
   # wayland compositor settings
   programs.niri = {
     enable = true;
@@ -143,7 +130,11 @@
     };
   };
 
+  home.sessionVariables = {
+    XKB_DEFAULT_LAYOUT = "us";
+    XKB_DEFAULT_VARIANT = "colemak";
+    QT_QPA_PLATFORM = "wayland;xcb";
+  };
   ## do not touch
   home.stateVersion = "25.11";
-  programs.home-manager.enable = true;
 }
