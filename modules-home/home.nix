@@ -25,11 +25,15 @@
     libqalculate
     zed-editor
     zellij
+    librewolf
   ];
 
   programs.home-manager.enable = true;
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.librewolf = {
     enable = true;
   };
   programs.zellij = {
