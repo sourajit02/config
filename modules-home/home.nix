@@ -14,7 +14,6 @@
   home.packages = with pkgs; [
     waybar
     fuzzel
-    # rofi
     ghostty
     mako
     trash-cli
@@ -26,6 +25,16 @@
   ];
 
   programs.home-manager.enable = true;
+
+  programs.yazi = {
+    enable = true;
+  };
+  programs.ghostty = {
+    enable = true;
+  };
+  programs.qutebrowser = {
+    enable = true;
+  };
 
   programs.fuzzel = {
     enable = true;
@@ -39,16 +48,6 @@
       };
     };
   };
-  programs.yazi = {
-    enable = true;
-  };
-  programs.ghostty = {
-    enable = true;
-  };
-  programs.qutebrowser = {
-    enable = true;
-  };
-
   programs.waybar = {
     enable = true;
     systemd.enable = true;

@@ -197,32 +197,34 @@
       "systemd-machine-id-setup --commit --root /persistent"
     ];
   };
-  stylix.enable = true;
-  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-  stylix.polarity = "dark"; # bias generation towards dark scheme
-  stylix.image = pkgs.fetchurl {
-    url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
-    hash = "sha256-G4L4vFOTeXFXeoV5/6r0PYHyIlGdYNxvYubLO1GCkbM=";
-  };
-  stylix.fonts = {
-    serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
+  stylix = {
+    enable = true;
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    polarity = "dark"; # bias generation towards dark scheme
+    image = pkgs.fetchurl {
+      url = "https://4kwallpapers.com/images/wallpapers/genshin-impact-5120x2880-22945.jpg";
+      hash = "sha256-G4L4vFOTeXFXeoV5/6r0PYHyIlGdYNxvYubLO1GCkbM=";
     };
+    fonts = {
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
+      };
 
-    sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
-    };
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
 
-    monospace = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans Mono";
-    };
+      monospace = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans Mono";
+      };
 
-    emoji = {
-      package = pkgs.noto-fonts-emoji;
-      name = "Noto Color Emoji";
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
     };
   };
 }
