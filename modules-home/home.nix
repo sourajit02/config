@@ -51,7 +51,7 @@
   };
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
+    systemd.enable = false;
     settings.mainBar.layer = "top";
   };
   programs.nushell = {
@@ -118,10 +118,10 @@
       };
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
-      # layout = {
-      #   gaps = 4;
-      #   border.width = 4;
-      # };
+      layout = {
+        gaps = 4;
+        border.width = 4;
+      };
       input = {
         keyboard = {
           repeat-delay = 250;
