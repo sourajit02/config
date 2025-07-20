@@ -22,6 +22,7 @@
     qutebrowser
     xwayland-satellite
     krita
+    swaybg
   ];
 
   home.sessionVariables = {
