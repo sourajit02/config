@@ -24,11 +24,15 @@
     blender
     libqalculate
     zed-editor
+    zellij
   ];
 
   programs.home-manager.enable = true;
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.zellij = {
     enable = true;
   };
   programs.zed-editor = {
