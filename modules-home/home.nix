@@ -30,8 +30,9 @@
   programs.fuzzel = {
     enable = true;
     settings = {
-      main = {
-        corner-radius = 0;
+      border = {
+        width = 0;
+        radius = 0;
       };
     };
   };
