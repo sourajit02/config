@@ -113,6 +113,9 @@
         }
         # { command = [ "~/.config/niri/scripts/startup.sh" ]; }
       ];
+      hotkey-overlay = {
+        skip-at-startup = true;
+      };
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
       layout = {
@@ -134,9 +137,8 @@
       binds = with config.lib.niri.actions; {
         "Mod+Return".action = spawn "ghostty";
         "Mod+N".action = spawn "ghostty -e yazi";
-        "Mod+slash".action = show-hotkey-overlay;
         "Mod+R".action = spawn "fuzzel";
-        "Mod+C".action = quit;
+        "Mod+C".action = close-window;
         # "Mod+D".action = spawn "rofi -show combi -modes combi -combi-modes \"drun,window\" -show-icons";
       };
     };
