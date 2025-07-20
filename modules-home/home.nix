@@ -22,11 +22,15 @@
     krita
     swaybg
     blender
+    qalc
   ];
 
   programs.home-manager.enable = true;
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.qalc = {
     enable = true;
   };
   programs.ghostty = {
