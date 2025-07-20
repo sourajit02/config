@@ -26,6 +26,7 @@
     libqalculate
     zed-editor
     zellij
+    btop
   ];
 
   programs.home-manager.enable = true;
@@ -34,6 +35,9 @@
     enable = true;
   };
   programs.zen-browser = {
+    enable = true;
+  };
+  programs.btop = {
     enable = true;
   };
   programs.zellij = {
