@@ -31,9 +31,6 @@
   programs.yazi = {
     enable = true;
   };
-  programs.zed = {
-    enable = true;
-  };
   programs.ghostty = {
     enable = true;
   };
