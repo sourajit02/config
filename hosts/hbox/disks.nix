@@ -93,7 +93,7 @@
                   mountpoint = "/swapspace";
                   mountOptions = [
                     "subvol=swapspace"
-                    # "compress=zstd"
+                    "compress=zstd"
                     "noatime"
                   ];
                 };
