@@ -201,6 +201,20 @@
       "systemd-machine-id-setup --commit --root /persistent"
     ];
   };
+
+  fonts.packages = with pkgs; [
+    (iosevka.override {
+      set = "term";
+      privateBuildPlan = {
+        family = "Iosevka Term Custom";
+        spacing = "term"; # Good for terminals
+        serifs = "sans";
+        # Your customizations here
+      };
+    })
+
+  ];
+
   stylix = {
     enable = true;
 
