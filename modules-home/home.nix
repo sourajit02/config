@@ -27,7 +27,6 @@
     zed-editor
     zellij
     btop
-    stress-ng
   ];
 
   programs.home-manager.enable = true;
