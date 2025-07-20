@@ -30,9 +30,6 @@
   programs.yazi = {
     enable = true;
   };
-  programs.libqalculate = {
-    enable = true;
-  };
   programs.ghostty = {
     enable = true;
   };
