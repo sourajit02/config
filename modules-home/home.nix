@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     waybar
     fuzzel
-    # rofi
+    rofi
     ghostty
     mako
     trash-cli
@@ -26,7 +26,7 @@
   ];
 
   programs.home-manager.enable = true;
-  programs.fuzzel = {
+  programs.rofi = {
     enable = true;
   };
   programs.yazi = {
@@ -38,12 +38,12 @@
   programs.qutebrowser = {
     enable = true;
   };
+
   programs.waybar = {
     enable = true;
     systemd.enable = true;
     settings.mainBar.layer = "top";
   };
-
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -123,8 +123,8 @@
         "Mod+Return".action = spawn "ghostty";
         "Mod+N".action = spawn "ghostty -e yazi";
         "Mod+slash".action = show-hotkey-overlay;
-        "Mod+D".action = spawn "fuzzel";
-        # "Mod+D".action = spawn "rofi";
+        # "Mod+D".action = spawn "fuzzel";
+        "Mod+D".action = spawn "rofi -show combi -modes combi -combi-modes \"drun,window\" -show-icons";
       };
     };
   };
