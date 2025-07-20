@@ -27,9 +27,6 @@
   ];
 
   programs.home-manager.enable = true;
-  programs.qutebrowser = {
-    enable = true;
-  };
   programs.fuzzel = {
     enable = true;
   };
@@ -42,6 +39,18 @@
     enable = true;
   };
   programs.ghostty = {
+    enable = true;
+  };
+  programs.mako = {
+    enable = true;
+  };
+  programs.trash-cli = {
+    enable = true;
+  };
+  programs.qutebrowser = {
+    enable = true;
+  };
+  programs.xwayland-satellite = {
     enable = true;
   };
 
