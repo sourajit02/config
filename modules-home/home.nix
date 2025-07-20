@@ -106,7 +106,7 @@
           command = [
             "swaybg"
             "--image"
-            # "${stylix.image}"
+            "${config.stylix.image}"
           ];
         }
         { command = [ "~/.config/niri/scripts/startup.sh" ]; }
