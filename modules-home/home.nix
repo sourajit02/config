@@ -47,9 +47,6 @@
   programs.xwayland-satellite = {
     enable = true;
   };
-  programs.blender = {
-    enable = true;
-  };
   programs.waybar = {
     enable = true;
     systemd.enable = true;
