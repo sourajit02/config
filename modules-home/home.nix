@@ -35,7 +35,7 @@
   programs.qutebrowser = {
     enable = true;
   };
-  programs.blender = {
+  programs.fuzzel = {
     enable = true;
   };
 
