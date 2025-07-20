@@ -131,7 +131,7 @@
         "Mod+Return".action = spawn "ghostty";
         "Mod+N".action = spawn "ghostty -e yazi";
         "Mod+slash".action = show-hotkey-overlay;
-        "Mod+D".action = spawn "fuzzel";
+        "Mod+R".action = spawn "fuzzel";
         # "Mod+D".action = spawn "rofi -show combi -modes combi -combi-modes \"drun,window\" -show-icons";
       };
     };
