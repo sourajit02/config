@@ -104,13 +104,13 @@
     settings = {
       spawn-at-startup = [
         { command = [ "waybar" ]; }
-        # {
-        #   command = [
-        #     "swaybg"
-        #     "--image"
-        #     "${config.stylix.image}"
-        #   ];
-        # }
+        {
+          command = [
+            "swaybg"
+            "--image"
+            "${config.stylix.image}"
+          ];
+        }
         # { command = [ "~/.config/niri/scripts/startup.sh" ]; }
       ];
       hotkey-overlay = {
@@ -118,10 +118,10 @@
       };
       prefer-no-csd = true;
       environment."NIXOS_OZONE_WL" = "1";
-      layout = {
-        gaps = 4;
-        border.width = 4;
-      };
+      # layout = {
+      #   gaps = 4;
+      #   border.width = 4;
+      # };
       input = {
         keyboard = {
           repeat-delay = 250;
