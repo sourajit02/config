@@ -114,7 +114,7 @@
           xkb = {
             layout = "us";
             variant = "colemak";
-            options = "compose:ralt,ctrl:backspace";
+            # options = "compose:ralt,ctrl:backspace";
           };
         };
       };
