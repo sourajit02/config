@@ -9,7 +9,7 @@
 {
   imports = [
     inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration, so use flake
-    inputs.zen-browser.homeModules.beta
+    # inputs.zen-browser.homeModules.beta
   ];
 
   home.packages = with pkgs; [
@@ -19,15 +19,14 @@
     mako
     trash-cli
     qutebrowser
+    # firefox
     xwayland-satellite
     krita
     swaybg
-    blender
     libqalculate
     zed-editor
     zellij
     btop
-    # iosevka
   ];
 
   programs.home-manager.enable = true;
@@ -35,7 +34,7 @@
   programs.yazi = {
     enable = true;
   };
-  programs.zen-browser = {
+  programs.firefox = {
     enable = true;
   };
   programs.btop = {
