@@ -147,7 +147,8 @@
           "sitar"
           "texts"
           "work"
-          ".zen"
+          # ".zen"
+          ".mozilla"
           # no need? .Trash-1000 being created per directory anyway
           # {
           #   directory = ".local/share/Trash";

@@ -14,19 +14,22 @@
 
   home.packages = with pkgs; [
     waybar
+    swaybg
+    xwayland-satellite
     fuzzel
     ghostty
     mako
     trash-cli
+
     qutebrowser
     # firefox
-    xwayland-satellite
+
     krita
-    swaybg
     libqalculate
-    zed-editor
     zellij
+    zed-editor
     btop
+    rmpc
   ];
 
   programs.home-manager.enable = true;
@@ -53,6 +56,21 @@
     enable = true;
   };
 
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/path/to/music";
+    extraConfig = ''
+      # must specify one or more outputs in order to play audio!
+      # (e.g. ALSA, PulseAudio, PipeWire), see next sections
+    '';
+
+    # Optional:
+    # network.listenAddress = "any"; # if you want to allow non-localhost connections
+    network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+  };
+  programs.rmpc = {
+    enable = true;
+  };
   programs.fuzzel = {
     enable = true;
     settings = {
