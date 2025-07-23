@@ -59,7 +59,7 @@
   services.suwayomi-server = {
     enable = true;
     # dataDir = "/home/s/..."
-    package = pkgs.suwayomi-server.overrideAttts (old: rec {
+    package = pkgs.suwayomi-server.overrideAttrs (old: rec {
       version = "2.0.1727";
       src = pkgs.fetchurl {
         url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
