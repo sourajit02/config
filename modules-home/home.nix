@@ -100,7 +100,7 @@
           "clock"
         ];
         "niri/workspaces" = {
-          icon-size = 10;
+          icon-size = 5;
         };
 
       };
