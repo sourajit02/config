@@ -73,12 +73,8 @@
     wget
     helix
     # yazi
-    # nushell
+    nushell
   ];
-
-  programs.nushell = {
-    enable = true;
-  };
 
   zramSwap = {
     enable = true;
