@@ -59,6 +59,7 @@
 
   services.suwayomi-server = {
     enable = true;
+    # dataDir = "/home/s/..."
   };
 
   environment.systemPackages = with pkgs; [
