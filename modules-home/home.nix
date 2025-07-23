@@ -99,9 +99,9 @@
           # "weather"
           "clock"
         ];
-        "niri/workspaces" = {
-          icon-size = 5;
-        };
+        # "niri/workspaces" = {
+        #   # icon-size = 12;
+        # };
 
       };
     };
