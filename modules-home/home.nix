@@ -103,6 +103,9 @@
         # "niri/workspaces" = {
         #   # icon-size = 12;
         # };
+        "wlr/taskbar" = {
+          icon-size = 8;
+        };
 
       };
     };
