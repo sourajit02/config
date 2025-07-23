@@ -82,6 +82,7 @@
       mainBar = {
         layer = "top";
         position = "bottom";
+        height = 16;
         spacing = 0;
         fixed-center = false;
         reload_style_on_change = true;
@@ -104,7 +105,7 @@
         #   # icon-size = 12;
         # };
         "wlr/taskbar" = {
-          icon-size = 8;
+          # icon-size = 8;
         };
 
       };
