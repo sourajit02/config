@@ -81,7 +81,48 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-        modules-right = [ "clock" ];
+        spacing = 0;
+        fixed-center = false;
+        reload_style_on_change = true;
+
+        modules-left = [
+          "hyprland/workspaces"
+          "tray"
+          "mpd"
+        ];
+        modules-right = [
+          "memory"
+          "disk"
+          # "disk#ssd"
+          "temperature"
+          # "weather"
+          "clock"
+        ];
+        "hyprland/workspaces" = {
+          sort-by = "number";
+          persistent-workspaces = {
+            "1" = [ ];
+            "2" = [ ];
+            "3" = [ ];
+            "4" = [ ];
+          };
+          format = "{icon}";
+          on-click = "activate";
+          format-icons = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            # "1" = "󰇧";
+            # "2" = "󰅱";
+            # "3" = "󰧛";
+            # "4" = "󰎁";
+            # urgent = "";
+            # default = "";
+          };
+          sort-by-number = true;
+        };
+
       };
     };
     # style = '''';
