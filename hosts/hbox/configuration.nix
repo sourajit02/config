@@ -50,7 +50,7 @@
   };
   # system.copySystemConfiguration = true; # cannot be used with nixos-anywhere
   services.openssh.enable = true;
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first

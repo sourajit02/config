@@ -22,6 +22,7 @@
     trash-cli
 
     qutebrowser
+    firefox
 
     krita
     libqalculate
