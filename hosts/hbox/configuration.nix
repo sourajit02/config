@@ -60,6 +60,7 @@
   services.suwayomi-server = {
     enable = true;
     # dataDir = "/home/s/..."
+    settings.server.port = 4567;
   };
 
   environment.systemPackages = with pkgs; [
