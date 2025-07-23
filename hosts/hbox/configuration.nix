@@ -61,10 +61,19 @@
     # dataDir = "/home/s/..."
     package = pkgs.suwayomi-server.overrideAttrs (old: rec {
       version = "2.0.1727";
+      jdk = "jdk21_headless";
       src = pkgs.fetchurl {
         url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
         hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
       };
+
+      # buildPhase = ''
+      #   runHook preBuild
+      #   makeWrapper ${jdk}/bin/java $out/bin/tachidesk-server \
+      #     --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
+      #   runHook postBuild
+      # '';
+
     });
 
     settings.server = {
