@@ -285,4 +285,5 @@
       };
     };
   };
+  # config.stylix.targets.firefox. = {};
 }
