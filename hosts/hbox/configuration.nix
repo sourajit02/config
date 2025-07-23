@@ -58,10 +58,11 @@
 
   services.suwayomi-server = {
     enable = true;
-    package = pkgs.suwayomi-server-unstable;
+    # package = pkgs.suwayomi-server; # nothign more recent than 1.1.1
     # dataDir = "/home/s/..."
     settings.server = {
       port = 4567;
+      downloadAsCbz = true;
       extensionRepos = [
         "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
       ];
