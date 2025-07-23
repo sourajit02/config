@@ -52,6 +52,14 @@
   services.openssh.enable = true;
   # programs.firefox.enable = true;
 
+  services.miniflux = {
+    enable = true;
+  };
+
+  services.suwayomi-server = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
     curl

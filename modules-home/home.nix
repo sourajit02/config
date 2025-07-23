@@ -30,8 +30,6 @@
     zed-editor
     btop
     rmpc
-
-    miniflux
   ];
 
   programs.home-manager.enable = true;
@@ -55,14 +53,6 @@
     enable = true;
   };
   programs.qutebrowser = {
-    enable = true;
-  };
-
-  services.miniflux = {
-    enable = true;
-  };
-
-  services.suwayomi-server = {
     enable = true;
   };
 
