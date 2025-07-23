@@ -54,6 +54,7 @@
 
   services.miniflux = {
     enable = true;
+    adminCredentialsFile = "/home/s/config/secrets/miniflux";
   };
 
   services.suwayomi-server = {
