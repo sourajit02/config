@@ -30,7 +30,7 @@
     btop
     rmpc
 
-    # miniflux
+    miniflux
   ];
 
   programs.home-manager.enable = true;
