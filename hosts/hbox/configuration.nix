@@ -66,8 +66,8 @@
         hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
       };
 
-      nativeBuildInputs = [ pkgs.makeWrapper ];
-      buildInputs = [ pkgs.jdk21_headless ];
+      # nativeBuildInputs = [ pkgs.makeWrapper ];
+      # buildInputs = [ pkgs.jdk21_headless ];
       buildPhase = ''
         runHook preBuild
         makeWrapper ${pkgs.jdk21_headless}/bin/java $out/bin/tachidesk-server \
