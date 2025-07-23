@@ -60,13 +60,19 @@
   services.suwayomi-server = {
     enable = true;
     # dataDir = "/home/s/..."
-    settings.server.port = 4567;
+    settings.server = {
+      port = 4567;
+      extensionRepos = [
+        "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
+      ];
+    };
   };
 
   programs.yazi = {
     enable = true;
   };
 
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
     curl
@@ -291,5 +297,4 @@
       };
     };
   };
-  # config.stylix.targets.firefox. = {};
 }
