@@ -76,7 +76,7 @@
     };
   };
   programs.waybar = {
-    # enable = true;
+    enable = true;
     systemd.enable = true; # disable if bar is not visible
     settings = {
       # this can be named anything? only important if having multiple bars
