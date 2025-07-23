@@ -58,10 +58,7 @@
 
   services.suwayomi-server = {
     enable = true;
-    # package = pkgs.suwayomi-server; # [pr](https://github.com/NixOS/nixpkgs/pull/400589)
     # dataDir = "/home/s/..."
-    #
-
     package = pkgs.suwayomi-server.overrideAttts (old: rec {
       version = "2.0.1727";
       src = pkgs.fetchurl {
@@ -90,6 +87,7 @@
     wget
     helix
     nushell
+    suwayomi-server # only needed for now to override version
   ];
 
   zramSwap = {
