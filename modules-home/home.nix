@@ -76,12 +76,13 @@
   };
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     settings = {
       main = {
         modules-right = [ "clock" ];
       };
     };
-    # style = { };
+    # style = '''';
   };
   programs.nushell = {
     enable = true;
