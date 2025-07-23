@@ -30,7 +30,7 @@
     btop
     rmpc
 
-    miniflux
+    # miniflux
   ];
 
   programs.home-manager.enable = true;
@@ -54,9 +54,6 @@
     enable = true;
   };
   programs.qutebrowser = {
-    enable = true;
-  };
-  programs.miniflux = {
     enable = true;
   };
 
