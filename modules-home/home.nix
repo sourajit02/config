@@ -86,7 +86,7 @@
         reload_style_on_change = true;
 
         modules-left = [
-          "hyprland/workspaces"
+          "niri/workspaces"
           "tray"
           "mpd"
         ];
@@ -98,7 +98,7 @@
           # "weather"
           "clock"
         ];
-        "hyprland/workspaces" = {
+        "niri/workspaces" = {
           sort-by = "number";
           persistent-workspaces = {
             "1" = [ ];
