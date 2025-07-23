@@ -29,6 +29,8 @@
     zed-editor
     btop
     rmpc
+
+    miniflux
   ];
 
   programs.home-manager.enable = true;
