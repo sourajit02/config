@@ -79,6 +79,8 @@
     systemd.enable = true; # disable if bar is not visible
     settings = {
       mainBar = {
+        layer = "top";
+        position = "bottom";
         modules-right = [ "clock" ];
       };
     };
