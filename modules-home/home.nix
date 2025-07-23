@@ -75,14 +75,13 @@
     };
   };
   programs.waybar = {
-    enable = true;
+    # enable = true;
     systemd.enable = true; # disable if bar is not visible
     settings = {
       # this can be named anything? only important if having multiple bars
       mainBar = {
         layer = "top";
         position = "bottom";
-        height = 16;
         spacing = 0;
         fixed-center = false;
         reload_style_on_change = true;
