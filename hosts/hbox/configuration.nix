@@ -67,10 +67,10 @@
       };
 
       nativeBuildInputs = [ pkgs.makeWrapper ];
-      buildInputs = [ pkgs.jre21 ];
+      buildInputs = [ pkgs.jdk21 ];
       buildPhase = ''
         runHook preBuild
-        makeWrapper ${pkgs.jre21}/bin/java $out/bin/tachidesk-server \
+        makeWrapper ${pkgs.jdk21}/bin/java $out/bin/tachidesk-server \
           --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
         runHook postBuild
       '';
