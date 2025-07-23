@@ -67,12 +67,13 @@
         hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
       };
 
-      # buildPhase = ''
-      #   runHook preBuild
-      #   makeWrapper ${jdk}/bin/java $out/bin/tachidesk-server \
-      #     --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
-      #   runHook postBuild
-      # '';
+      buildPhase = ''
+        runHook preBuild
+        makeWrapper ${jdk}/bin/java $out/bin/tachidesk-server \
+          --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
+        runHook postBuild
+      '';
+      platforms = jdk.meta.platforms;
 
     });
 
