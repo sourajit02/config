@@ -34,9 +34,6 @@
 
   programs.home-manager.enable = true;
 
-  services.suwayomi-server = {
-    enable = true;
-  };
   programs.yazi = {
     enable = true;
   };

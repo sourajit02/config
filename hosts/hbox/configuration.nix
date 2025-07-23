@@ -57,6 +57,10 @@
     adminCredentialsFile = "/home/s/config/secrets/miniflux";
   };
 
+  services.suwayomi-server = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
     curl
