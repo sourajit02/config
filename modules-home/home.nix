@@ -13,23 +13,23 @@
   ];
 
   home.packages = with pkgs; [
-    waybar
+    # waybar
     swaybg
     xwayland-satellite
-    fuzzel
-    ghostty
+    # fuzzel
+    # ghostty
     mako
     trash-cli
 
-    qutebrowser
-    firefox
+    # qutebrowser
+    # firefox
 
     krita
     libqalculate
-    zellij
-    zed-editor
-    btop
-    rmpc
+    # zellij
+    # zed-editor
+    # btop
+    # rmpc
   ];
 
   programs.home-manager.enable = true;

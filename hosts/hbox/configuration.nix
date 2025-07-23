@@ -63,14 +63,26 @@
     settings.server.port = 4567;
   };
 
+  programs.yazi = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     git # order matters, so git is first
     curl
     wget
-    helix
-    yazi
-    nushell
+    # helix
+    # yazi
+    # nushell
   ];
+
+  programs.nushell = {
+    enable = true;
+  };
+
+  programs.helix = {
+    enable = true;
+  };
 
   zramSwap = {
     enable = true;
