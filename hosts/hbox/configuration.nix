@@ -66,6 +66,8 @@
     helix
     yazi
     nushell
+
+    miniflux
   ];
 
   zramSwap = {
