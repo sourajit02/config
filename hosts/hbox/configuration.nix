@@ -60,6 +60,16 @@
     enable = true;
     # package = pkgs.suwayomi-server; # [pr](https://github.com/NixOS/nixpkgs/pull/400589)
     # dataDir = "/home/s/..."
+    #
+
+    package = pkgs.suwayomi-server.overrideAttts (old: rec {
+      version = "2.0.1727";
+      src = pkgs.fetchurl {
+        url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
+        hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
+      };
+    });
+
     settings.server = {
       port = 4567;
       downloadAsCbz = true;
