@@ -77,11 +77,11 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true; # disable if bar is not visible
-    # settings = {
-    #   main = {
-    #     modules-right = [ "clock" ];
-    #   };
-    # };
+    settings = {
+      mainBar = {
+        modules-right = [ "clock" ];
+      };
+    };
     # style = '''';
   };
   programs.nushell = {
