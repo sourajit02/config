@@ -73,7 +73,7 @@
           --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
         runHook postBuild
       '';
-      platforms = jdk.meta.platforms;
+      # platforms = jdk.meta.platforms;
 
     });
 
