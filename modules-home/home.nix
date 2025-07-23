@@ -22,7 +22,6 @@
     trash-cli
 
     qutebrowser
-    # firefox
 
     krita
     libqalculate
@@ -55,10 +54,13 @@
   programs.qutebrowser = {
     enable = true;
   };
+  programs.miniflux = {
+    enable = true;
+  };
 
   services.mpd = {
     enable = true;
-    musicDirectory = "/path/to/music";
+    musicDirectory = "~/media/audio/"; # right path?
     extraConfig = ''
       # must specify one or more outputs in order to play audio!
       # (e.g. ALSA, PulseAudio, PipeWire), see next sections
@@ -85,6 +87,12 @@
   };
   programs.waybar = {
     enable = true;
+    settings = {
+      main = {
+        modules-right = [ "clock" ];
+      };
+    };
+    # style = { };
   };
   programs.nushell = {
     enable = true;
