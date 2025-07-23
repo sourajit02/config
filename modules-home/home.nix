@@ -20,6 +20,7 @@
 
     krita
     libqalculate
+    wttrbar
   ];
 
   programs.home-manager.enable = true;
@@ -87,24 +88,29 @@
         reload_style_on_change = true;
 
         modules-left = [
-          # "niri/workspaces"
+          "niri/workspaces"
           "wlr/taskbar"
-          "tray"
           "mpd"
+          "tray"
         ];
         modules-right = [
           "memory"
           "disk"
           # "disk#ssd"
           "temperature"
-          # "weather"
+          "custom/weather"
           "clock"
         ];
         # "niri/workspaces" = {
-        #   # icon-size = 12;
         # };
-        "wlr/taskbar" = {
-          # icon-size = 8;
+        # "wlr/taskbar" = {
+        # };
+        "custom/weather" = {
+          format = "{}°";
+          tooltip = true;
+          interval = 1800;
+          exec = "wttrbar";
+          return-type = "json";
         };
 
       };
