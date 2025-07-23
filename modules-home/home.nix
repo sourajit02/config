@@ -78,6 +78,7 @@
     enable = true;
     systemd.enable = true; # disable if bar is not visible
     settings = {
+      # this can be named anything? only important if having multiple bars
       mainBar = {
         layer = "top";
         position = "bottom";
@@ -99,28 +100,7 @@
           "clock"
         ];
         "niri/workspaces" = {
-          sort-by = "number";
-          persistent-workspaces = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-          };
-          format = "{icon}";
-          on-click = "activate";
-          format-icons = {
-            "1" = "1";
-            "2" = "2";
-            "3" = "3";
-            "4" = "4";
-            # "1" = "󰇧";
-            # "2" = "󰅱";
-            # "3" = "󰧛";
-            # "4" = "󰎁";
-            # urgent = "";
-            # default = "";
-          };
-          sort-by-number = true;
+          icon-size = 10;
         };
 
       };
