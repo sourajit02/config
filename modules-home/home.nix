@@ -58,6 +58,10 @@
     enable = true;
   };
 
+  services.suwayomi-server = {
+    enable = true;
+  };
+
   services.mpd = {
     enable = true;
     musicDirectory = "~/media/audio/"; # right path?
