@@ -58,6 +58,7 @@
 
   services.suwayomi-server = {
     enable = true;
+    packag = pkgs.unstable.suwayomi-server;
     # dataDir = "/home/s/..."
     settings.server = {
       port = 4567;
