@@ -57,6 +57,10 @@
     enable = true;
   };
 
+  services.miniflux = {
+    enable = true;
+  };
+
   services.suwayomi-server = {
     enable = true;
   };
