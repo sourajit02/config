@@ -13,23 +13,13 @@
   ];
 
   home.packages = with pkgs; [
-    # waybar
     swaybg
     xwayland-satellite
-    # fuzzel
-    # ghostty
     mako
     trash-cli
 
-    # qutebrowser
-    # firefox
-
     krita
     libqalculate
-    # zellij
-    # zed-editor
-    # btop
-    # rmpc
   ];
 
   programs.home-manager.enable = true;
@@ -59,14 +49,12 @@
   services.mpd = {
     enable = true;
     musicDirectory = "~/media/audio/"; # right path?
-    extraConfig = ''
-      # must specify one or more outputs in order to play audio!
-      # (e.g. ALSA, PulseAudio, PipeWire), see next sections
-    '';
-
-    # Optional:
-    # network.listenAddress = "any"; # if you want to allow non-localhost connections
     network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+    # extraConfig = ''
+    #   # must specify one or more outputs in order to play audio!
+    #   # (e.g. ALSA, PulseAudio, PipeWire), see next sections
+    # '';
+    # network.listenAddress = "any"; # if you want to allow non-localhost connections
   };
   programs.rmpc = {
     enable = true;
