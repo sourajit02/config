@@ -58,7 +58,7 @@
 
   services.suwayomi-server = {
     enable = true;
-    # package = pkgs.suwayomi-server; # nothign more recent than 1.1.1 apr 2024
+    # package = pkgs.suwayomi-server; # [pr](https://github.com/NixOS/nixpkgs/pull/400589)
     # dataDir = "/home/s/..."
     settings.server = {
       port = 4567;

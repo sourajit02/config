@@ -45,6 +45,9 @@
   programs.qutebrowser = {
     enable = true;
   };
+  programs.zathura = {
+    enable = true;
+  };
 
   services.mpd = {
     enable = true;
