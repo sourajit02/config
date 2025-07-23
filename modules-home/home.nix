@@ -115,7 +115,16 @@
 
       };
     };
-    # style = '''';
+    style = ''
+      * {
+      	border: none;
+      	border-radius: 0;
+      	font-family: "monospace";
+      	min-height: 0;
+      	font-size: 1.015em;
+      	font-weight: 600;
+      }             
+    '';
   };
   programs.nushell = {
     enable = true;
