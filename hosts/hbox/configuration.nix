@@ -71,16 +71,12 @@
     git # order matters, so git is first
     curl
     wget
-    # helix
+    helix
     # yazi
     # nushell
   ];
 
   programs.nushell = {
-    enable = true;
-  };
-
-  programs.helix = {
     enable = true;
   };
 
