@@ -45,6 +45,7 @@
 
     # mujoco
     # ouch
+    # ocenaudio # checksum mismatch???
     bottles # older than bottles-unwrapped package?
     clblast
     deadbeef-with-plugins
@@ -61,7 +62,6 @@
     mpc
     mpvScripts.thumbfast # there are others
     nvtopPackages.amd
-    # ocenaudio # checksum mismatch???
     osu-lazer-bin
     pavucontrol
     pdfarranger

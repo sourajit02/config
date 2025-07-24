@@ -365,8 +365,8 @@
         name = "Noto Color Emoji";
       };
     };
-    targets.firefox.profileNames = [ ];
   };
+  config.stylix.targets.firefox.profileNames = [ ];
 
   services.paperless = {
     enable = true;
