@@ -81,6 +81,9 @@
   programs.yazi = {
     enable = true;
   };
+  programs.zen-browser = {
+    enable = true;
+  };
   programs.uv = {
     enable = true;
   };
