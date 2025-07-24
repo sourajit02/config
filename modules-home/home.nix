@@ -59,8 +59,8 @@
     media-downloader
     mousai
     mpc
-    "mpvScripts.thumbfast" # there are others
-    "nvtopPackages.amd"
+    mpvScripts.thumbfast # there are others
+    nvtopPackages.amd
     ocenaudio
     osu-lazer-bin
     pavucontrol
