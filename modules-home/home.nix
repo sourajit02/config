@@ -20,10 +20,15 @@
     xwayland-satellite
     mako
     trash-cli
+    restic
 
     krita
     libqalculate
     wttrbar
+
+    basedpyright
+    bibtex-tidy
+    bottles-unwrapped # newer than bottles package?
   ];
 
   programs.home-manager.enable = true;
