@@ -9,7 +9,7 @@
 {
   imports = [
     inputs.niri.homeModules.niri # nixpkgs version has no home-manager intergration, so use flake
-    # inputs.zen-browser.homeModules.beta
+    inputs.zen-browser.homeModules.beta
   ];
 
   home.stateVersion = "25.11";
@@ -93,7 +93,7 @@
   programs.fastfetch = {
     enable = true;
   };
-  programs.firefox = {
+  programs.zen = {
     enable = true;
   };
   programs.btop = {
