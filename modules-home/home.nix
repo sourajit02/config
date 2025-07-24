@@ -153,8 +153,8 @@
         # reload_style_on_change = true;
 
         modules-left = [
-          "niri/workspaces"
-          "wlr/taskbar"
+          # "niri/workspaces"
+          # "wlr/taskbar"
           "mpd"
           "tray"
         ];
@@ -186,8 +186,7 @@
       	border-radius: 0;
       	font-family: "monospace";
       	min-height: 0;
-      	/* font-size: 1.015em; */
-      	font-size: 0.9em;
+      	font-size: 1.015em;
       	font-weight: 600;
       }             
     '';
