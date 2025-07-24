@@ -21,6 +21,9 @@
   system.stateVersion = "25.11"; # never change this
   ############################
 
+  # check if this works on real hardware
+  # sudo dmesg | grep microcode
+  # https://github.com/e-tho/ucodenix
   services.ucodenix.enable = true;
 
   hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
@@ -136,6 +139,10 @@
     ];
     createHome = true;
   };
+  boot.initrd.kernelParams = [
+    "amdgpu"
+    "microcode.amd_sha_check=off"
+  ];
 
   hardware.graphics = {
     enable = true;
@@ -352,4 +359,35 @@
       };
     };
   };
+
+  services.restic = {
+    enable = true;
+    backups = {
+      localbackup = {
+        exclude = [
+        ];
+        initialize = true;
+        passwordFile = "/etc/nixos/secrets/restic-password";
+        paths = [
+          "/persist"
+        ];
+        repository = "/mnt/backup-hdd";
+      };
+      # remotebackup = {
+      #   extraOptions = [
+      #     "sftp.command='ssh backup@host -i /etc/nixos/secrets/backup-private-key -s sftp'"
+      #   ];
+      #   passwordFile = "/etc/nixos/secrets/restic-password";
+      #   paths = [
+      #     "/home"
+      #   ];
+      #   repository = "sftp:backup@host:/backups/home";
+      #   timerConfig = {
+      #     OnCalendar = "00:05";
+      #     RandomizedDelaySec = "5h";
+      #   };
+      # };
+    };
+  };
+
 }
