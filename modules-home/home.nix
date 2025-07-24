@@ -186,7 +186,8 @@
       	border-radius: 0;
       	font-family: "monospace";
       	min-height: 0;
-      	font-size: 0.855em;
+      	/* font-size: 1.015em; */
+      	font-size: 0.9em;
       	font-weight: 600;
       }             
     '';
