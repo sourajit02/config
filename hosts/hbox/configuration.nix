@@ -77,7 +77,9 @@
 
   services.suwayomi-server = {
     enable = true;
-    # dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits
+    user = "s";
+    group = "users";
+    dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits
     package = pkgs.suwayomi-server.overrideAttrs (old: rec {
       version = "2.0.1727";
       src = pkgs.fetchurl {
