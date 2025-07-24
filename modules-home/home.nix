@@ -153,7 +153,7 @@
         # reload_style_on_change = true;
 
         modules-left = [
-          # "niri/workspaces"
+          "niri/workspaces"
           # "wlr/taskbar"
           "mpd"
           "tray"
