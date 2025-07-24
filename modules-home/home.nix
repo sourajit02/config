@@ -61,7 +61,7 @@
     mpc
     mpvScripts.thumbfast # there are others
     nvtopPackages.amd
-    ocenaudio
+    # ocenaudio # checksum mismatch???
     osu-lazer-bin
     pavucontrol
     pdfarranger
