@@ -239,7 +239,7 @@
           "photos"
           "projects"
           "sitar"
-          "texts"
+          "reading"
           "work"
           ".zen"
           # no need? .Trash-1000 being created per directory anyway
