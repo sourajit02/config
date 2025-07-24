@@ -241,7 +241,7 @@
           "games"
           {
             directory = "manga";
-            inItrd = true;
+            inInitrd = true;
           }
           # "manga"
           # no media, is mounted on separate drive so won't be wiped anyway
