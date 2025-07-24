@@ -77,7 +77,7 @@
 
   services.suwayomi-server = {
     enable = true;
-    # dataDir = "/home/s/..."
+    dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits
     package = pkgs.suwayomi-server.overrideAttrs (old: rec {
       version = "2.0.1727";
       src = pkgs.fetchurl {
@@ -197,6 +197,7 @@
         "/var/lib/systemd/coredump"
         "/var/lib/systemd/rfkill"
         "/var/lib/systemd/timers"
+        # miniflux db location here
         {
           directory = "/var/lib/nixos";
           inInitrd = true;
@@ -232,22 +233,20 @@
         # ie copy over downloads/* into downloads instead of downloads into home/s
         directories = [
           "config"
-          "apps"
           "courses"
+          "documents"
           "downloads"
+          "games"
+          "manga"
           # no media, is mounted on separate drive so won't be wiped anyway
+          "notes"
           "photos"
           "projects"
-          "sitar"
           "reading"
+          "sitar"
           "work"
+
           ".zen"
-          # no need? .Trash-1000 being created per directory anyway
-          # {
-          #   directory = ".local/share/Trash";
-          #   mountOptions = [ "x-gvfs-trash" ];
-          #   how = "symlink";
-          # }
           {
             directory = ".ssh";
             mode = "0700";
@@ -374,16 +373,20 @@
   # services.paperless = {
   #   enable = true;
   #   passwordFile = "/etc/paperless-admin-pass";
+  #   settings = {
+  #     PAPERLESS_DBHOST = "localhost";
+  #     PAPERLESS_CONSUMER_IGNORE_PATTERN = [
+  #       ".DS_STORE/*"
+  #       "desktop.ini"
+  #     ];
+  #     PAPERLESS_OCR_LANGUAGE = "eng";
+  #     PAPERLESS_OCR_USER_ARGS = {
+  #       optimize = 1;
+  #       pdfa_image_compression = "lossless";
+  #     };
 
-  #   # PAPERLESS_CONSUMER_IGNORE_PATTERN = [
-  #   #   ".DS_STORE/*"
-  #   #   "desktop.ini"
-  #   # ];
-  #   # PAPERLESS_OCR_LANGUAGE = "deu+eng";
-  #   # PAPERLESS_OCR_USER_ARGS = {
-  #   #   optimize = 1;
-  #   #   pdfa_image_compression = "lossless";
-  #   # };
+  #   };
+
   # };
 
 }
