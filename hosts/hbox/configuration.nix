@@ -366,7 +366,7 @@
       };
     };
   };
-  config.stylix.targets.firefox.profileNames = [ ];
+  stylix.targets.firefox.profileNames = [ ];
 
   services.paperless = {
     enable = true;
