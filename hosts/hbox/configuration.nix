@@ -362,12 +362,12 @@
   };
 
   services.restic = {
-    enable = true;
+    # enable = true; # only available in home-manager restic
     backups = {
       localbackup = {
         exclude = [
         ];
-        initialize = true;
+        initialize = false;
         passwordFile = "/etc/nixos/secrets/restic-password";
         paths = [
           "/persist"
