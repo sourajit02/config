@@ -239,7 +239,11 @@
           "documents"
           "downloads"
           "games"
-          "manga"
+          {
+            directory = "manga";
+            inItrd = true;
+          }
+          # "manga"
           # no media, is mounted on separate drive so won't be wiped anyway
           "notes"
           "photos"
