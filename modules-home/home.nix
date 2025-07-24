@@ -93,9 +93,6 @@
   programs.fastfetch = {
     enable = true;
   };
-  programs.zen = {
-    enable = true;
-  };
   programs.btop = {
     enable = true;
   };
