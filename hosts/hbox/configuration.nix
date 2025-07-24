@@ -367,4 +367,8 @@
     };
   };
 
+  services.paperless = {
+    enable = true;
+  };
+
 }
