@@ -139,7 +139,8 @@
     ];
     createHome = true;
   };
-  boot.initrd.kernelParams = [
+
+  boot.kernelParams = [
     "amdgpu"
     "microcode.amd_sha_check=off"
   ];
