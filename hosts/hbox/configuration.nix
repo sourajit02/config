@@ -75,31 +75,31 @@
     adminCredentialsFile = "/home/s/config/secrets/miniflux";
   };
 
-  # services.suwayomi-server = {
-  #   enable = true;
-  #   dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits
-  #   package = pkgs.suwayomi-server.overrideAttrs (old: rec {
-  #     version = "2.0.1727";
-  #     src = pkgs.fetchurl {
-  #       url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
-  #       hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
-  #     };
-  #     buildPhase = ''
-  #       runHook preBuild
-  #       makeWrapper ${pkgs.jdk21_headless}/bin/java $out/bin/tachidesk-server \
-  #         --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
-  #       runHook postBuild
-  #     '';
-  #   });
+  services.suwayomi-server = {
+    enable = true;
+    dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits
+    package = pkgs.suwayomi-server.overrideAttrs (old: rec {
+      version = "2.0.1727";
+      src = pkgs.fetchurl {
+        url = "https://github.com/Suwayomi/Suwayomi-Server/releases/download/v${version}/Suwayomi-Server-v${version}.jar";
+        hash = "sha256-+nq9/uQ/3Xjyj8oKiXrTF34y7Ig/I95spRWjwPP7+Uw=";
+      };
+      buildPhase = ''
+        runHook preBuild
+        makeWrapper ${pkgs.jdk21_headless}/bin/java $out/bin/tachidesk-server \
+          --add-flags "-Dsuwayomi.tachidesk.config.server.initialOpenInBrowserEnabled=false -jar $src"
+        runHook postBuild
+      '';
+    });
 
-  #   settings.server = {
-  #     port = 4567;
-  #     downloadAsCbz = true;
-  #     extensionRepos = [
-  #       "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
-  #     ];
-  #   };
-  # };
+    settings.server = {
+      port = 4567;
+      downloadAsCbz = true;
+      extensionRepos = [
+        "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json"
+      ];
+    };
+  };
 
   programs.yazi = {
     enable = true;
