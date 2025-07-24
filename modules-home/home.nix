@@ -54,7 +54,7 @@
     hd-idle
     hugin
     imgbrd-grabber
-    libreoffice-bin
+    libreoffice
     losslesscut-bin
     media-downloader
     mousai
