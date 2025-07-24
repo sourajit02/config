@@ -23,8 +23,8 @@
 
   services.ucodenix.enable = true;
 
-  config.hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
-  config.hardware.cpu.amd.updateMicrocode = true;
+  hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
+  hardware.cpu.amd.updateMicrocode = true;
   users.users.root.initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
