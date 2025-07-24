@@ -26,8 +26,14 @@
   # https://github.com/e-tho/ucodenix
   services.ucodenix.enable = true;
 
-  hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
-  hardware.cpu.amd.updateMicrocode = true;
+  hardware = {
+    amdgpu.overdrive.ppfeaturemask = "0xffffffff";
+    cpu.amd.updateMicrocode = true;
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
+  };
   users.users.root.initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;

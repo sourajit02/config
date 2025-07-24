@@ -26,14 +26,71 @@
     libqalculate
     wttrbar
 
+    # hunspell
+    # hunspellDicts.en_AU
+    # languagetool-rust
+    # js-beautify
+    # ltex-ls-plus # not many users?
+    # bibtex-tidy
+    # jdtls
+    # dockfmt
+    # cmake-language-server
+    # markdownlint-cli
+    # rich-cli
+    # ruff
+    # simple-completion-language-server
+    markdown-oxide
+    dprint
     basedpyright
-    bibtex-tidy
-    bottles-unwrapped # newer than bottles package?
+
+    # mujoco
+    # ouch
+    bottles # older than bottles-unwrapped package?
+    clblast
+    deadbeef-with-plugins
+    legcord
+    gimp3-with-plugins
+    gpu-screen-recorder-gtk
+    hd-idle
+    hugin
+    imgbrd-grabber
+    libreoffice-bin
+    losslesscut-bin
+    media-downloader
+    mousai
+    mpc
+    mpvscripts.thumbfast # there are others
+    nvtopPackages.amd
+    ocenaudio
+    osu-lazer-bin
+    pavucontrol
+    pdfarranger
+    qbittorrent-enhanced-nox
+    rnote
+    sigil
+    simple-completion-language-server
+    simple-scan
+    wev
+    wootility
+    # wootility-udev-rules
+    zotero
   ];
 
   programs.home-manager.enable = true;
 
   programs.yazi = {
+    enable = true;
+  };
+  programs.uv = {
+    enable = true;
+  };
+  programs.obs-studio = {
+    enable = true;
+  };
+  programs.mpv = {
+    enable = true;
+  };
+  programs.fastfetch = {
     enable = true;
   };
   programs.firefox = {
@@ -55,6 +112,10 @@
     enable = true;
   };
   programs.zathura = {
+    enable = true;
+  };
+
+  services.paperless = {
     enable = true;
   };
 
