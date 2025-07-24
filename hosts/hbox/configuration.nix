@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     # ./hardware-configuration.nix
     ./disks.nix
+    inputs.ucodenix.nixosModules.default
   ];
 
   nix.settings.experimental-features = [
@@ -18,6 +19,12 @@
     "flakes"
   ];
   system.stateVersion = "25.11"; # never change this
+  ############################
+
+  services.ucodenix.enable = true;
+
+  config.hardware.amdgpu.overdrive.ppfeaturemask = "0xffffffff";
+  config.hardware.cpu.amd.updateMicrocode = true;
   users.users.root.initialHashedPassword = "$y$j9T$LgZNfZgC.jlSpJHuYdWJW1$YcJSBxMF.9rWLb5ijXRKyoSJgfc6HWNdMlRkUxl1yND";
   security.sudo.wheelNeedsPassword = false;
   boot.loader.systemd-boot.enable = true;
@@ -91,10 +98,13 @@
     git # order matters, so git is first
     curl
     wget
+    lact
     helix
     nushell
     suwayomi-server # only needed for now to override version
   ];
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   zramSwap = {
     enable = true;
@@ -107,8 +117,10 @@
   #   };
   # };
 
-  hardware.graphics.enable = true;
-  environment.variables.EDITOR = "helix";
+  environment.variables = {
+    EDITOR = "helix";
+    AMD_VULKAN_ICD = "RADV";
+  };
 
   users.mutableUsers = false;
   users.users.s = {
@@ -125,6 +137,35 @@
     createHome = true;
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      amdvlk
+      rocmPackages.clr.icd
+    ];
+    extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+    ];
+  };
+
+  ## are these needed?
+  # boot.initrd.kernelModules = [ "amdgpu" ];
+  # systemd.tmpfiles.rules =
+  #   let
+  #     rocmEnv = pkgs.symlinkJoin {
+  #       name = "rocm-combined";
+  #       paths = with pkgs.rocmPackages; [
+  #         rocblas
+  #         hipblas
+  #         clr
+  #       ];
+  #     };
+  #   in
+  #   [
+  #     "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+  #   ];
+  #
   boot.initrd.systemd.enable = true;
   preservation = {
     enable = true;
