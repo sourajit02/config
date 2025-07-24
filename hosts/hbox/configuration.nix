@@ -365,6 +365,7 @@
         name = "Noto Color Emoji";
       };
     };
+    targets.firefox.profileNames = [ ];
   };
 
   services.paperless = {
