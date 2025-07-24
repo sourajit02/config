@@ -150,7 +150,7 @@
         position = "bottom";
         spacing = 0;
         fixed-center = false;
-        reload_style_on_change = true;
+        # reload_style_on_change = true;
 
         modules-left = [
           "niri/workspaces"
@@ -186,7 +186,8 @@
       	border-radius: 0;
       	font-family: "monospace";
       	min-height: 0;
-      	font-size: 1.015em;
+      	# font-size: 1.015em;
+      	font-size: 0.455em;
       	font-weight: 600;
       }             
     '';
