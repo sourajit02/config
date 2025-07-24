@@ -28,7 +28,7 @@
 
   hardware = {
     amdgpu.overdrive.ppfeaturemask = "0xffffffff";
-    cpu.amd.updateMicrocode = true;
+    # cpu.amd.updateMicrocode = true; # ucodenix flake provides actual updates for non-server cpus
     opentabletdriver = {
       enable = true;
       daemon.enable = true;
@@ -40,13 +40,16 @@
   boot.loader.timeout = 2;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 20;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
+
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
+    settings.auto-optimise-store = true;
   };
-  nix.settings.auto-optimise-store = true;
-  nix.nixPath = [ "/home/s/config" ];
+
   networking.hostName = "hbox";
   networking.networkmanager.enable = true;
   services.printing.enable = true;
@@ -368,20 +371,20 @@
   };
 
   ## accessed at localhost:28981
-  # environment.etc."paperless-admin-pass".text = "admin";
-  # services.paperless = {
-  #   enable = true;
-  #   passwordFile = "/etc/paperless-admin-pass";
+  environment.etc."paperless-admin-pass".text = "admin";
+  services.paperless = {
+    enable = true;
+    passwordFile = "/etc/paperless-admin-pass";
 
-  #   PAPERLESS_CONSUMER_IGNORE_PATTERN = [
-  #     ".DS_STORE/*"
-  #     "desktop.ini"
-  #   ];
-  #   PAPERLESS_OCR_LANGUAGE = "deu+eng";
-  #   PAPERLESS_OCR_USER_ARGS = {
-  #     optimize = 1;
-  #     pdfa_image_compression = "lossless";
-  #   };
-  # };
+    PAPERLESS_CONSUMER_IGNORE_PATTERN = [
+      ".DS_STORE/*"
+      "desktop.ini"
+    ];
+    PAPERLESS_OCR_LANGUAGE = "deu+eng";
+    PAPERLESS_OCR_USER_ARGS = {
+      optimize = 1;
+      pdfa_image_compression = "lossless";
+    };
+  };
 
 }
