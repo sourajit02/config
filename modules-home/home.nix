@@ -12,6 +12,9 @@
     # inputs.zen-browser.homeModules.beta
   ];
 
+  home.stateVersion = "25.11";
+  #############################
+
   home.packages = with pkgs; [
     swaybg
     xwayland-satellite
@@ -213,11 +216,34 @@
     };
   };
 
-  home.sessionVariables = {
-    XKB_DEFAULT_LAYOUT = "us";
-    XKB_DEFAULT_VARIANT = "colemak";
-    # QT_QPA_PLATFORM = "wayland;xcb";
+  services.restic = {
+    enable = true; # only available in home-manager restic
+    backups = {
+      localbackup = {
+        exclude = [
+        ];
+        initialize = false;
+        passwordFile = "/etc/nixos/secrets/restic-password";
+        paths = [
+          "/persist"
+        ];
+        repository = "/mnt/backup-hdd";
+      };
+      # remotebackup = {
+      #   extraOptions = [
+      #     "sftp.command='ssh backup@host -i /etc/nixos/secrets/backup-private-key -s sftp'"
+      #   ];
+      #   passwordFile = "/etc/nixos/secrets/restic-password";
+      #   paths = [
+      #     "/home"
+      #   ];
+      #   repository = "sftp:backup@host:/backups/home";
+      #   timerConfig = {
+      #     OnCalendar = "00:05";
+      #     RandomizedDelaySec = "5h";
+      #   };
+      # };
+    };
   };
-  ## do not touch
-  home.stateVersion = "25.11";
+
 }
