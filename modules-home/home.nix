@@ -188,12 +188,8 @@
       	min-height: 0;
       	font-size: 1.015em;
       	font-weight: 600;
-      }             
-
-      #workspaces {
       	padding: 0 0px;
-      	background-color: rgba(46, 52, 64, 0.2);
-      }
+      }             
     '';
   };
   programs.nushell = {
