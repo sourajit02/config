@@ -144,7 +144,7 @@
         position = "bottom";
         spacing = 0;
         fixed-center = false;
-        reload_style_on_change = true;
+        # reload_style_on_change = true;
 
         modules-left = [
           "niri/workspaces"
