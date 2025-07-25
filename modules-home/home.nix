@@ -118,7 +118,7 @@
   services.mpd = {
     enable = true;
     musicDirectory = "/home/s/media/audio/"; # right path?
-    network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+    # network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
 
     # extraConfig = ''
     #   audio_output {
