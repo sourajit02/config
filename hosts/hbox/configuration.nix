@@ -87,8 +87,8 @@
 
   services.suwayomi-server = {
     enable = true;
-    # user = "s";
-    # group = "users";
+    user = "s";
+    group = "users";
     dataDir = "/home/s/manga"; # move to /home/s/media/manga once space permits, symlink for now?
     settings.server = {
       port = 4567;
