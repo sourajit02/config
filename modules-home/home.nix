@@ -148,7 +148,7 @@
 
         modules-left = [
           "niri/workspaces"
-          "wlr/taskbar"
+          # "wlr/taskbar"
           "mpd"
           "tray"
         ];
