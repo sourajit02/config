@@ -117,7 +117,7 @@
 
   services.mpd = {
     enable = true;
-    musicDirectory = "/home/s/media/audio/"; # right path?
+    musicDirectory = "~/media/audio/";
   };
   programs.rmpc = {
     enable = true;
