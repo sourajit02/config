@@ -119,10 +119,13 @@
     enable = true;
     musicDirectory = "/home/s/media/audio/"; # right path?
     network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
-    # extraConfig = ''
-    #   # must specify one or more outputs in order to play audio!
-    #   # (e.g. ALSA, PulseAudio, PipeWire), see next sections
-    # '';
+
+    extraConfig = ''
+      audio_output {
+        type "pulse"
+        name "My PulseAudio" # this can be whatever you want
+      }
+    '';
     # network.listenAddress = "any"; # if you want to allow non-localhost connections
   };
   programs.rmpc = {
