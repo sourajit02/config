@@ -89,7 +89,7 @@
     enable = true;
     user = "s";
     group = "users";
-    dataDir = "/home/manga"; # move to /home/s/media/manga once space permits, symlink for now?
+    dataDir = "/home/s"; # move to /home/s/media/manga once space permits, symlink for now?
     settings.server = {
       port = 4567;
       downloadAsCbz = true;
