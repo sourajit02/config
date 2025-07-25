@@ -21,6 +21,15 @@
   system.stateVersion = "25.11"; # never change this
   ############################
 
+  fileSystems."/home/s/test" = {
+    fsType = "vboxsf";
+    device = "test";
+    options = [
+      "rw"
+      "nofail"
+    ];
+  };
+
   # check if this works on real hardware
   # sudo dmesg | grep microcode
   # https://github.com/e-tho/ucodenix
