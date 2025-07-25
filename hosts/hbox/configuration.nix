@@ -21,6 +21,7 @@
   system.stateVersion = "25.11"; # never change this
   ############################
 
+  # shared folder
   fileSystems."/home/s/test" = {
     fsType = "vboxsf";
     device = "test";
@@ -254,6 +255,8 @@
           }
           # "manga"
           # no media, is mounted on separate drive so won't be wiped anyway
+          "media"
+
           "notes"
           "photos"
           "projects"
