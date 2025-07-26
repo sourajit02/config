@@ -284,10 +284,10 @@
       user = "s";
       group = "users";
     };
-    # "/home/s/.local".d = {
-    #   user = "s";
-    #   group = "users";
-    # };
+    "/home/s/.local".d = {
+      user = "s";
+      group = "users";
+    };
     # "/home/s/.local/share".d = {
     #   user = "s";
     #   group = "users";
