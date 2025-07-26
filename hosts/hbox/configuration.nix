@@ -280,10 +280,10 @@
 
   # add directories here to set permissions correctly
   systemd.tmpfiles.settings.preservation = {
-    # "/home/s/.config".d = {
-    #   user = "s";
-    #   group = "users";
-    # };
+    "/home/s/.config".d = {
+      user = "s";
+      group = "users";
+    };
     # "/home/s/.local".d = {
     #   user = "s";
     #   group = "users";
