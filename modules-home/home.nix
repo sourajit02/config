@@ -76,6 +76,11 @@
     zotero
   ];
 
+  # this section literally does not have any effect on wayland for the time being, see [this](https://github.com/nix-community/home-manager/issues/1011)
+  home.sessionVariables = {
+    EDITOR = "hx";
+  };
+
   programs.home-manager.enable = true;
 
   programs.yazi = {
@@ -196,6 +201,9 @@
             # reboot
           }
     '';
+    environmentVariables = {
+      EDITOR = "hx";
+    };
     settings = {
       show_banner = false;
       completions.external = {
@@ -231,6 +239,10 @@
   programs.niri = {
     enable = true;
     settings = {
+      environment = {
+        QT_QPA_PLATFORM = "wayland";
+        EDITOR = "hx"; # will not work in tty, remember niri has to spawn nushell
+      };
       spawn-at-startup = [
         { command = [ "waybar" ]; }
         {

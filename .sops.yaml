@@ -1,0 +1,30 @@
+# useful commands
+#
+# Make a user key
+# mkdir -p ~/.config/sops/age
+# age-keygen -o ~/.config/sops/age/keys.txt
+# chmod 600 ~/.config/sops/age/keys.txt
+
+# Display the user public key:
+# age-keygen -y ~/.config/sops/age/keys.txt
+
+# Make a host public key:
+# nix-shell -p ssh-to-age
+# ssh-to-age -i /etc/ssh/ssh_host_ed25519_key.pub
+
+# Add secrets
+# sops secrets/secrets.yaml
+
+# Rekey secrets.yaml after editing recipients in .sops.yaml:
+# sops updatekeys secrets/secrets.yaml
+
+keys:
+  # primary age key common to all hosts (standalone age, not derived from ssh key)
+  - &primary age1exk7ph3yk8dp82czn76hr2f0zx5kzftskpzy67a7vxj3f3ndh37q9s6v83
+  - &vm age106lnrar883uayn0vw7sxyhec9wwtyc3r9ya67zvferlr7hw57ejq7qylc4
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *primary
+          - *vm
