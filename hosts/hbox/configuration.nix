@@ -12,6 +12,7 @@
     # ./hardware-configuration.nix
     ./disks.nix
     inputs.ucodenix.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
   ];
 
   nix.settings.experimental-features = [
@@ -249,20 +250,15 @@
           "documents"
           "downloads"
           "games"
-          {
-            directory = "manga";
-            inInitrd = true;
-          }
-          # "manga"
+          "manga"
           # no media, is mounted on separate drive so won't be wiped anyway
-          "media"
-
           "notes"
           "photos"
           "projects"
           "reading"
           "sitar"
           "work"
+          ".local"
 
           ".zen"
           {
@@ -284,14 +280,14 @@
 
   # add directories here to set permissions correctly
   systemd.tmpfiles.settings.preservation = {
-    "/home/s/.config".d = {
-      user = "s";
-      group = "users";
-    };
-    "/home/s/.local".d = {
-      user = "s";
-      group = "users";
-    };
+    # "/home/s/.config".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
+    # "/home/s/.local".d = {
+    #   user = "s";
+    #   group = "users";
+    # };
     # "/home/s/.local/share".d = {
     #   user = "s";
     #   group = "users";

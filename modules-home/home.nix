@@ -190,10 +190,10 @@
     enable = true;
     extraConfig = ''
       def nrs [] {
-            cd /home/s/config
-            git pull
+            cd /home/s/test/config
+            # git pull
             sudo nixos-rebuild switch --flake
-            reboot
+            # reboot
           }
     '';
     settings = {
